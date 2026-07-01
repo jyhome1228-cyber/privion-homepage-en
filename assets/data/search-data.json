@@ -1,0 +1,121 @@
+[
+  {
+    "title": "FMCW LiDAR",
+    "category": "기술 소개",
+    "url": "technology.html",
+    "description": "산업 환경을 기준으로 설계한 FMCW LiDAR 기술 소개 페이지입니다.",
+    "keywords": "fmcw lidar 라이다 기술소개 기술 소개 frequency modulated continuous wave"
+  },
+  {
+    "title": "산업용 LiDAR 기술",
+    "category": "기술 소개",
+    "url": "technology.html",
+    "description": "FMCW 방식, ToF 방식 비교 및 프리비온 LiDAR 기술 구조를 확인할 수 있습니다.",
+    "keywords": "산업용 라이다 tof 비교 fmcw 비교 코히런트 도플러 1550nm"
+  },
+  {
+    "title": "Product Line-up",
+    "category": "제품",
+    "url": "product.html",
+    "description": "프리비온 DL 시리즈 제품 라인업을 확인할 수 있는 제품 목록 페이지입니다.",
+    "keywords": "제품 product lineup dl series dl100 dl100s dl150 dl150s"
+  },
+  {
+    "title": "LiDAR DL100",
+    "category": "제품",
+    "url": "product-dl100.html",
+    "description": "컴팩트 산업용 감지형 FMCW LiDAR 제품입니다.",
+    "keywords": "dl100 detection type 감지형 컴팩트 산업용 라이다 lidar"
+  },
+  {
+    "title": "LiDAR DL100S",
+    "category": "제품",
+    "url": "product-dl100s.html",
+    "description": "컴팩트 산업용 스캔형 FMCW LiDAR 제품입니다.",
+    "keywords": "dl100s scanning type 스캔형 컴팩트 산업용 라이다 lidar slam"
+  },
+  {
+    "title": "LiDAR DL150",
+    "category": "제품",
+    "url": "product-dl150.html",
+    "description": "야외환경 및 고정형 시스템을 위한 감지형 FMCW LiDAR 제품입니다.",
+    "keywords": "dl150 detection type 감지형 야외환경 고정형 라이다 lidar"
+  },
+  {
+    "title": "LiDAR DL150S",
+    "category": "제품",
+    "url": "product-dl150s.html",
+    "description": "야외환경 및 고정형 시스템을 위한 스캔형 FMCW LiDAR 제품입니다.",
+    "keywords": "dl150s scanning type 스캔형 야외환경 고정형 라이다 lidar point cloud"
+  },
+  {
+    "title": "AMR / AGV",
+    "category": "적용 분야",
+    "url": "application.html",
+    "description": "AMR 및 AGV 환경에 적용 가능한 LiDAR 솔루션입니다.",
+    "keywords": "amr agv 자율주행 이동로봇 자동화 물류 로봇"
+  },
+  {
+    "title": "OHT",
+    "category": "적용 분야",
+    "url": "application.html",
+    "description": "정밀 제조 라인과 OHT 시스템을 위한 센싱 솔루션입니다.",
+    "keywords": "oht 반도체 이송 시스템 제조라인 센싱"
+  },
+  {
+    "title": "Port Cranes",
+    "category": "적용 분야",
+    "url": "application.html",
+    "description": "항만 크레인과 대형 구조물 환경에서 활용 가능한 LiDAR 솔루션입니다.",
+    "keywords": "port cranes 항만 크레인 대형 구조물 위치 인식"
+  },
+  {
+    "title": "Heavy Machinery",
+    "category": "적용 분야",
+    "url": "application.html",
+    "description": "건설, 광산, 토목 장비 환경에서 활용 가능한 LiDAR 솔루션입니다.",
+    "keywords": "heavy machinery 중장비 건설 광산 토목 안전 감지"
+  },
+  {
+    "title": "Smart City",
+    "category": "적용 분야",
+    "url": "application.html",
+    "description": "스마트시티 환경에서 사람, 차량, 인프라를 인식하는 LiDAR 활용 분야입니다.",
+    "keywords": "smart city 스마트시티 도시 인프라 차량 보행자 감지"
+  },
+  {
+    "title": "Smart Farm",
+    "category": "적용 분야",
+    "url": "application.html",
+    "description": "스마트팜 및 농업 자동화 환경에 적용 가능한 LiDAR 솔루션입니다.",
+    "keywords": "smart farm 스마트팜 농업 자동화 농기계 센싱"
+  },
+  {
+    "title": "Contact",
+    "category": "문의",
+    "url": "contact.html",
+    "description": "프리비온 위치, 연락처, 지도 정보를 확인할 수 있는 문의 페이지입니다.",
+    "keywords": "문의 contact 위치 주소 전화 지도 판교이노밸리"
+  },
+  {
+    "title": "Download",
+    "category": "자료",
+    "url": "assets/download/privion-dl-series-catalog.pdf",
+    "description": "프리비온 DL 시리즈 카탈로그 PDF 다운로드 파일입니다.",
+    "keywords": "download 다운로드 catalog 카탈로그 pdf 자료"
+  },
+  {
+    "title": "이용약관",
+    "category": "정책",
+    "url": "terms.html",
+    "description": "프리비온 홈페이지 이용약관 페이지입니다.",
+    "keywords": "이용약관 약관 terms policy"
+  },
+  {
+    "title": "개인정보처리방침",
+    "category": "정책",
+    "url": "privacy.html",
+    "description": "프리비온 홈페이지 개인정보처리방침 페이지입니다.",
+    "keywords": "개인정보처리방침 개인정보 privacy policy"
+  }
+]
