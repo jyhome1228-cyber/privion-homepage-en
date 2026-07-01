@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+=========================================================
+PRIVION sitemap.xml
+
+검색엔진에 사이트 페이지 구조를 알려주는 파일입니다.
+
+최종 운영 도메인:
+https://www.privionlidar.com
+
+수정 기준:
+- 모든 <loc> 주소는 최종 운영 도메인 기준으로 작성했습니다.
+- 페이지 파일명이 변경되거나 URL 구조가 바뀌면 해당 <loc>도 함께 수정해주세요.
+=========================================================
+-->
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://www.privionlidar.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 기술 소개 -->
+  <url>
+    <loc>https://www.privionlidar.com/technology.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 제품 목록 -->
+  <url>
+    <loc>https://www.privionlidar.com/product.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 제품 상세: DL100 -->
+  <url>
+    <loc>https://www.privionlidar.com/product-dl100.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 제품 상세: DL100S -->
+  <url>
+    <loc>https://www.privionlidar.com/product-dl100s.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 제품 상세: DL150 -->
+  <url>
+    <loc>https://www.privionlidar.com/product-dl150.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 제품 상세: DL150S -->
+  <url>
+    <loc>https://www.privionlidar.com/product-dl150s.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 적용 분야 -->
+  <url>
+    <loc>https://www.privionlidar.com/application.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 문의 -->
+  <url>
+    <loc>https://www.privionlidar.com/contact.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 검색 -->
+  <url>
+    <loc>https://www.privionlidar.com/search.html</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- 이용약관 -->
+  <url>
+    <loc>https://www.privionlidar.com/terms.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- 개인정보처리방침 -->
+  <url>
+    <loc>https://www.privionlidar.com/privacy.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
