@@ -91,6 +91,16 @@
       margin: 0;
     }
 
+    .pv-contact-item a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .pv-contact-item a:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .pv-contact-icon {
       width: 22px;
       height: 22px;
@@ -165,14 +175,15 @@
     }
 
     .pv-map-box {
+      position: relative;
       width: 100%;
-      aspect-ratio: 1.55 / 1;
+      height: 520px;
       border-radius: 8px;
       overflow: hidden;
       background: #f3f4f5;
     }
 
-    /* 카카오맵 퍼가기 영역 반응형 보정 */
+    /* 카카오맵 퍼가기 반응형 보정 */
     .pv-map-box .root_daum_roughmap {
       width: 100% !important;
       height: 100% !important;
@@ -184,7 +195,7 @@
     }
 
     .pv-map-box .root_daum_roughmap .wrap_controllers {
-      display: none;
+      display: none !important;
     }
 
     .pv-download {
@@ -285,7 +296,7 @@
       }
 
       .pv-map-box {
-        aspect-ratio: 1.15 / 1;
+        height: 360px;
       }
 
       .pv-download {
@@ -482,13 +493,11 @@
           <!-- MAP -->
           <div class="pv-map-area">
             <div class="pv-map-box">
-
               <!-- 카카오맵 - 지도퍼가기 -->
               <div
                 id="daumRoughmapContainer1782952610139"
                 class="root_daum_roughmap root_daum_roughmap_landing"
               ></div>
-
             </div>
           </div>
 
@@ -575,12 +584,16 @@
   ></script>
 
   <script charset="UTF-8">
-    new daum.roughmap.Lander({
-      "timestamp": "1782952610139",
-      "key": "q5dkafwp9kn",
-      "mapWidth": "640",
-      "mapHeight": "640"
-    }).render();
+    window.addEventListener("load", function () {
+      if (window.daum && window.daum.roughmap) {
+        new daum.roughmap.Lander({
+          timestamp: "1782952610139",
+          key: "q5dkafwp9kn",
+          mapWidth: "640",
+          mapHeight: "520"
+        }).render();
+      }
+    });
   </script>
 
 </body>
