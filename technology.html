@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <!-- =========================================================
+    PRIVION TECHNOLOGY PAGE
+    기술 소개 페이지입니다.
+    이미지 경로는 assets/images/logo/ 기준입니다.
+  ========================================================= -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>기술 소개 | Privion</title>
+
+  <meta
+    name="description"
+    content="산업 환경을 기준으로 설계한 Privion FMCW LiDAR 기술 소개 페이지입니다."
+  >
+
+  <meta
+    name="keywords"
+    content="Privion, FMCW LiDAR, 라이다, 산업용 LiDAR, ToF LiDAR, 1550nm, 센싱 기술"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="기술 소개 | Privion">
+  <meta property="og:description" content="산업 환경을 기준으로 설계한 FMCW LiDAR 기술 소개">
+  <meta property="og:url" content="https://www.privionlidar.com/technology.html">
+  <meta property="og:image" content="https://www.privionlidar.com/assets/images/logo/fmcw-main.png">
+  <meta property="og:site_name" content="Privion">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  >
+  <link rel="stylesheet" href="assets/css/privion.css">
+
+  <style>
+    /* =========================================================
+       TECHNOLOGY PAGE LOCAL STYLE
+    ========================================================= */
+
+    .pv-tech-main {
+      padding: 140px 0 134px;
+    }
+
+    .pv-tech-head {
+      margin-bottom: 74px;
+    }
+
+    .pv-tech-title {
+      margin: 0 0 30px;
+      color: #000;
+      font-size: clamp(44px, 4.6vw, 72px);
+      font-weight: 760;
+      line-height: 0.95;
+      letter-spacing: -0.085em;
+    }
+
+    .pv-tech-subtitle {
+      margin: 0 0 44px;
+      color: #000;
+      font-size: clamp(27px, 2.35vw, 38px);
+      font-weight: 700;
+      line-height: 1.22;
+      letter-spacing: -0.065em;
+    }
+
+    .pv-tech-desc {
+      max-width: 790px;
+      margin: 0;
+      color: #777;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.82;
+      letter-spacing: -0.035em;
+    }
+
+    .pv-tech-visual {
+      width: 100%;
+      margin-bottom: 54px;
+      border-radius: 7px;
+      overflow: hidden;
+      background: #f3f4f5;
+    }
+
+    .pv-tech-visual img {
+      width: 100%;
+      height: auto;
+    }
+
+    .pv-tech-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 92px;
+      padding: 43px 0;
+      border-bottom: 1px solid #dedede;
+    }
+
+    .pv-tech-row-title {
+      margin: 0;
+      color: #000;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.28;
+      letter-spacing: -0.055em;
+    }
+
+    .pv-tech-row-text {
+      margin: 0;
+      color: #777;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.78;
+      letter-spacing: -0.035em;
+    }
+
+    .pv-tech-banner {
+      width: 100%;
+      margin: 92px 0 46px;
+      border-radius: 7px;
+      overflow: hidden;
+      background: #f3f4f5;
+    }
+
+    .pv-tech-banner img {
+      width: 100%;
+      height: auto;
+    }
+
+    .pv-tech-note {
+      margin: 0 0 58px;
+      color: #777;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.82;
+      letter-spacing: -0.035em;
+    }
+
+    /* Compare */
+    .pv-compare-wrap {
+      position: relative;
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    .pv-compare {
+      position: relative;
+      display: grid;
+      grid-template-columns: 170px minmax(300px, 1fr) minmax(300px, 1fr);
+      gap: 0;
+      align-items: stretch;
+      min-height: 760px;
+      background: #f3f4f5;
+      border-radius: 7px;
+      overflow: visible;
+    }
+
+    .pv-compare-labels {
+      padding: 188px 0 70px;
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      align-items: center;
+    }
+
+    .pv-compare-labels span {
+      padding-left: 46px;
+      color: #000;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.04em;
+    }
+
+    .pv-compare-card {
+      position: relative;
+      z-index: 2;
+      margin: -38px 0 -38px;
+      padding: 74px 66px 66px;
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+    }
+
+    .pv-compare-card.is-muted {
+      z-index: 1;
+      margin: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .pv-compare-title {
+      margin: 0 0 6px;
+      color: #000;
+      font-size: 42px;
+      font-weight: 760;
+      line-height: 0.98;
+      letter-spacing: -0.08em;
+    }
+
+    .pv-compare-title.is-muted-title {
+      color: #8d8d8d;
+    }
+
+    .pv-compare-sub {
+      margin: 0 0 64px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+    }
+
+    .pv-compare-list {
+      display: grid;
+      grid-template-rows: repeat(6, 1fr);
+      gap: 0;
+      min-height: 560px;
+    }
+
+    .pv-compare-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4px 0;
+    }
+
+    .pv-compare-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: #000;
+      font-size: 15px;
+      font-weight: 650;
+      line-height: 1.45;
+      letter-spacing: -0.045em;
+    }
+
+    .pv-compare-item p {
+      margin: 0;
+      color: #777;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.65;
+      letter-spacing: -0.035em;
+    }
+
+    .pv-compare-footnote {
+      margin: 78px 0 0;
+      text-align: right;
+      color: #777;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: -0.03em;
+    }
+
+    @media (max-width: 1024px) {
+      .pv-tech-main {
+        padding: 110px 0 110px;
+      }
+
+      .pv-tech-row {
+        gap: 54px;
+      }
+
+      .pv-compare {
+        grid-template-columns: 120px 1fr 1fr;
+      }
+
+      .pv-compare-card,
+      .pv-compare-card.is-muted {
+        padding: 58px 38px 54px;
+      }
+
+      .pv-compare-title {
+        font-size: 34px;
+      }
+
+      .pv-compare-labels span {
+        padding-left: 26px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pv-tech-main {
+        padding: 82px 0 86px;
+      }
+
+      .pv-tech-head {
+        margin-bottom: 42px;
+      }
+
+      .pv-tech-title {
+        margin-bottom: 22px;
+        font-size: 42px;
+      }
+
+      .pv-tech-subtitle {
+        margin-bottom: 28px;
+        font-size: 24px;
+      }
+
+      .pv-tech-desc,
+      .pv-tech-note,
+      .pv-tech-row-text {
+        font-size: 14px;
+        line-height: 1.72;
+      }
+
+      .pv-tech-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 32px 0;
+      }
+
+      .pv-tech-row-title {
+        font-size: 22px;
+      }
+
+      .pv-tech-banner {
+        margin: 62px 0 34px;
+      }
+
+      .pv-compare {
+        display: block;
+        min-height: 0;
+        background: transparent;
+        border-radius: 0;
+      }
+
+      .pv-compare-labels {
+        display: none;
+      }
+
+      .pv-compare-card,
+      .pv-compare-card.is-muted {
+        margin: 0 0 18px;
+        padding: 42px 30px;
+        background: #fff;
+        border: 1px solid #ededed;
+        border-radius: 7px;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.075);
+      }
+
+      .pv-compare-card.is-muted {
+        background: #f3f4f5;
+      }
+
+      .pv-compare-title {
+        font-size: 32px;
+      }
+
+      .pv-compare-sub {
+        margin-bottom: 34px;
+      }
+
+      .pv-compare-list {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        min-height: 0;
+      }
+
+      .pv-compare-item {
+        display: block;
+        padding: 0;
+      }
+
+      .pv-compare-footnote {
+        margin-top: 42px;
+        text-align: left;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pv-tech-title {
+        font-size: 36px;
+      }
+
+      .pv-tech-subtitle {
+        font-size: 21px;
+      }
+
+      .pv-tech-row-title {
+        font-size: 20px;
+      }
+
+      .pv-compare-card,
+      .pv-compare-card.is-muted {
+        padding: 34px 24px;
+      }
+
+      .pv-compare-title {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="pv-header">
+    <div class="pv-header-inner">
+      <a href="index.html" class="pv-logo" aria-label="Privion Home">
+        <img
+          src="assets/images/logo/privion-logo.png"
+          alt="privion"
+          class="pv-logo-image"
+        >
+      </a>
+
+      <nav class="pv-nav" aria-label="Main Navigation">
+        <a href="technology.html" class="is-active">기술 소개</a>
+        <a href="product.html">제품</a>
+        <a href="application.html">적용 분야</a>
+        <a href="contact.html">문의</a>
+      </nav>
+
+      <div class="pv-header-right">
+        <a href="search.html" class="pv-header-icon" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke-width="1.8"></circle>
+            <path
+              d="M16.5 16.5L21 21"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- TECHNOLOGY MAIN -->
+  <main class="pv-tech-main">
+    <div class="pv-container">
+
+      <section class="pv-tech-head">
+        <h1 class="pv-tech-title">FMCW LiDAR</h1>
+
+        <h2 class="pv-tech-subtitle">
+          산업 환경을 기준으로 설계한 FMCW LiDAR
+        </h2>
+
+        <p class="pv-tech-desc">
+          DL 시리즈는 산업 현장의 복잡한 조건 속에서도 흔들리지 않는 감지를 위한 FMCW LiDAR입니다.<br>
+          환경 변화에 강한 구조와 정밀한 신호 분석 기술을 바탕으로, 자동화와 로봇 시스템에 안정적인 센싱 성능을 제공합니다.<br>
+          자동화 및 로봇 시스템에 필요한 거리와 속도 정보를 더욱 정확하게 확보할 수 있도록 설계되었습니다.
+        </p>
+      </section>
+
+      <section class="pv-tech-visual">
+        <img
+          src="assets/images/logo/fmcw-main.png"
+          alt="FMCW LiDAR product series"
+        >
+      </section>
+
+      <section class="pv-tech-row">
+        <h3 class="pv-tech-row-title">
+          FMCW 방식 기반의 산업용 LiDAR 설계
+        </h3>
+
+        <p class="pv-tech-row-text">
+          주파수 변조 연속파 방식을 적용해 반사 신호의 주파수 차이를 분석함으로써 거리 정보를 계산하는 구조를 사용합니다.
+          이 방식은 기존 펄스 기반 ToF 방식과 달리 주변광이나 다중 반사 조건에 의한 간섭에 강한 특성을 가지며,
+          복잡한 환경에서도 감지 성능 저하를 최소화하도록 설계되었습니다.
+        </p>
+      </section>
+
+      <section class="pv-tech-row">
+        <h3 class="pv-tech-row-title">
+          확장 가능한 제품 라인업 구조
+        </h3>
+
+        <p class="pv-tech-row-text">
+          산업용 LiDAR에서 다양한 센서 환경에 대응할 수 있도록 설계되었습니다.
+          270°, 180°, 90°의 수직 시야각 옵션과 20~50Hz 스캔 주파수를 지원하며,
+          상황에 따라 감지 영역을 설정할 수 있는 기능을 제공합니다.
+          자동화 설비, 로봇 시스템 등 다양한 산업 환경에서 필요한 수준으로 적용할 수 있습니다.
+        </p>
+      </section>
+
+      <section class="pv-tech-banner">
+        <img
+          src="assets/images/logo/beyond-tof.png"
+          alt="Beyond ToF Beyond Limits"
+        >
+      </section>
+
+      <p class="pv-tech-note">
+        산업 현장에서 운영되는 LiDAR는 단순한 조건이 아닌, 복합금속 구조물이 있거나 어려운 환경에서도 안정적인 감지 성능을 유지해야 합니다.
+        안개와 외부 광원, 거울 조건, 강한 주변광, 다수의 반사체가 동시에 존재하는 상황은 기존 ToF 방식의 LiDAR에서 감지 성능 저하와 신호 간섭 문제를 유발할 수 있습니다.
+        이러한 한계를 고려해, 산업 환경을 기준으로 한 감지 방식과 신호 처리 구조가 요구됩니다.
+      </p>
+
+      <!-- COMPARE -->
+      <section class="pv-compare-wrap">
+        <div class="pv-compare">
+
+          <div class="pv-compare-labels">
+            <span>작동 원리</span>
+            <span>속도 측정</span>
+            <span>간섭 내성</span>
+            <span>해상도 / 정밀도</span>
+            <span>악천후 성능</span>
+            <span>주요 파장</span>
+          </div>
+
+          <article class="pv-compare-card">
+            <h3 class="pv-compare-title">FMCW LiDAR</h3>
+            <p class="pv-compare-sub">(Frequency Modulated Continuous Wave)</p>
+
+            <div class="pv-compare-list">
+              <div class="pv-compare-item">
+                <strong>주파수 변조 연속파(FMCW) 방식</strong>
+                <p>
+                  주파수가 선형적으로 변하는 레이저를 연속적으로 방사하고,
+                  반사파와의 주파수 차이를 측정하여 거리와 속도를 동시에 계산합니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>도플러 효과를 이용한 속도 정보 측정</strong>
+                <p>
+                  송신파와 반사파 간 주파수 차이를 기반으로 거리와 속도 정보를 정밀하게 분리해 추출합니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>강한 간섭 내성</strong>
+                <p>
+                  코히런트(Coherent) 감지 방식으로 주변광과 센서 간 상호 간섭에 강건한 구조를 가집니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>높은 해상도와 정밀도</strong>
+                <p>
+                  고해상도 및 고정밀 거리 측정이 가능해 산업 환경에서 안정적인 감지 성능을 제공합니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>악천후 환경 대응성</strong>
+                <p>
+                  안개, 외부 광원, 복합 반사 조건 등에서도 비교적 안정적인 신호 처리가 가능합니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>1550nm</strong>
+                <p>
+                  인체에 안전한 파장 영역으로 고출력 운용이 가능하며,
+                  외부 환경에서 비교적 강한 신호 처리가 가능합니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="pv-compare-card is-muted">
+            <h3 class="pv-compare-title is-muted-title">ToF LiDAR</h3>
+            <p class="pv-compare-sub">(Time of Flight)</p>
+
+            <div class="pv-compare-list">
+              <div class="pv-compare-item">
+                <strong>펄스(Pulse) 방식</strong>
+                <p>
+                  레이저 펄스를 방사하고, 물체에 반사되어 돌아오는 데 걸린 비행 시간을 측정해 거리를 계산합니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>시간차 기반 거리 계산</strong>
+                <p>
+                  거리 데이터 기반의 연산이 필요하며, 환경 조건에 따라 오차가 발생할 수 있습니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>간섭에 상대적으로 취약</strong>
+                <p>
+                  반사광 주파수 또는 다른 LiDAR 펄스에 의한 상호 간섭 영향을 받을 수 있습니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>장거리 정밀도 확보 한계</strong>
+                <p>
+                  장거리 환경에서 정밀도 확보가 어려울 수 있으며, 외부 환경의 영향을 받을 수 있습니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>환경 변화 영향</strong>
+                <p>
+                  안개, 강한 주변광, 반사체가 많은 환경에서 신호 산란과 흡수 영향을 받을 수 있습니다.
+                </p>
+              </div>
+
+              <div class="pv-compare-item">
+                <strong>905nm</strong>
+                <p>
+                  일부 환경에서 신호 흡수 및 산란에 따른 성능 저하가 발생할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="pv-compare-footnote">
+          도플러 효과 : 파원과 관측자의 상대적인 거리 변화로 인해 파동의 주파수와 파장이 달라져 보이는 현상<br>
+          코히런트 : 자기 간섭성의 고유한 패턴을 인식하여 주변광·간섭 조건에서 안정적인 감지를 가능하게 하는 수광 방식
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pv-footer">
+    <div class="pv-footer-inner">
+      <div class="pv-footer-left">
+        <a href="index.html" class="pv-logo" aria-label="Privion Home">
+          <img
+            src="assets/images/logo/privion-logo.png"
+            alt="privion"
+            class="pv-logo-image"
+          >
+        </a>
+
+        <p class="pv-footer-info">
+          프리비온 주식회사<br>
+          Web www.privionlidar.com<br>
+          Tel 02-589-2312<br>
+          Email privion-lidar@dongwon.com<br>
+          주소 경기도 성남시 분당구 삼평동 621 판교이노밸리 제B동 6층 604호
+        </p>
+      </div>
+
+      <div class="pv-footer-right">
+        <div class="pv-footer-links">
+          <a href="terms.html">이용약관</a>
+          <a href="privacy.html">개인정보처리방침</a>
+        </div>
+
+        <p class="pv-copy">
+          Copyright © Privion. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/privion-common.js"></script>
+</body>
+</html>
