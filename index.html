@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <!-- =========================================================
+    PRIVION HOME PAGE
+    HOME 메인 페이지입니다.
+    이미지 경로는 assets/images/logo/ 기준입니다.
+  ========================================================= -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Privion | FMCW LiDAR Solution</title>
+
+  <meta
+    name="description"
+    content="Privion은 산업 환경을 위한 FMCW LiDAR 솔루션을 제공합니다. 자동화 설비, 로봇, 스마트시티, 스마트팜 등 다양한 산업 환경에 적용 가능한 정밀 센싱 기술을 소개합니다."
+  >
+
+  <meta
+    name="keywords"
+    content="Privion, 프리비온, FMCW LiDAR, 산업용 LiDAR, 라이다, AMR, AGV, OHT, Smart City, Smart Farm"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privion | FMCW LiDAR Solution">
+  <meta property="og:description" content="산업 환경을 위한 정밀 FMCW LiDAR 솔루션">
+  <meta property="og:url" content="https://www.privionlidar.com">
+  <meta property="og:image" content="https://www.privionlidar.com/assets/images/logo/home-hero.png">
+  <meta property="og:site_name" content="Privion">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  >
+  <link rel="stylesheet" href="assets/css/privion.css">
+
+  <style>
+    /* =========================================================
+       HOME PAGE LOCAL STYLE
+       HOME 전용 보정 스타일입니다.
+    ========================================================= */
+
+    .pv-home-hero {
+      position: relative;
+      width: 100%;
+      min-height: 760px;
+      background: #edf0f2;
+      overflow: hidden;
+    }
+
+    .pv-home-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .pv-home-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .pv-home-hero-inner {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1480px;
+      min-height: 760px;
+      margin: 0 auto;
+      padding: 120px 72px 80px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .pv-home-hero-copy {
+      width: 46%;
+      max-width: 620px;
+    }
+
+    .pv-home-hero-lead {
+      margin: 0 0 30px;
+      color: #4e5255;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 1.3;
+      letter-spacing: -0.045em;
+    }
+
+    .pv-home-hero-title {
+      margin: 0 0 18px;
+      color: #241717;
+      font-size: clamp(76px, 7vw, 132px);
+      font-weight: 760;
+      line-height: 0.82;
+      letter-spacing: -0.09em;
+    }
+
+    .pv-home-hero-sub {
+      margin: 0 0 38px;
+      color: #000;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .pv-home-hero-logo {
+      margin-top: 140px;
+    }
+
+    .pv-home-intro {
+      padding: 126px 0 92px;
+      text-align: center;
+    }
+
+    .pv-home-intro-title {
+      margin: 0 0 30px;
+      color: #000;
+      font-size: clamp(48px, 4vw, 74px);
+      font-weight: 760;
+      line-height: 0.95;
+      letter-spacing: -0.08em;
+    }
+
+    .pv-home-intro-sub {
+      margin: 0 0 36px;
+      color: #000;
+      font-size: clamp(24px, 2vw, 34px);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -0.06em;
+    }
+
+    .pv-home-intro-desc {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #777;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.78;
+      letter-spacing: -0.035em;
+    }
+
+    .pv-home-products {
+      padding: 36px 0 112px;
+    }
+
+    .pv-home-product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .pv-home-product-card {
+      min-height: 416px;
+      padding: 58px 30px 36px;
+      background: #f4f5f6;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .pv-home-product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.075);
+    }
+
+    .pv-home-product-img {
+      width: 100%;
+      height: 190px;
+      margin: 0 auto 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pv-home-product-img img {
+      width: auto;
+      max-width: 76%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .pv-home-product-type {
+      margin: 0 0 6px;
+      color: #000;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .pv-home-product-name {
+      margin: 0 0 8px;
+      color: #000;
+      font-size: 27px;
+      font-weight: 760;
+      line-height: 0.96;
+      letter-spacing: -0.075em;
+    }
+
+    .pv-home-product-desc {
+      margin: 0 0 26px;
+      color: #333;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.35;
+    }
+
+    /* Rolling Applications */
+    .pv-home-applications {
+      padding: 8px 0 112px;
+      overflow: hidden;
+    }
+
+    .pv-home-rolling {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding-bottom: 34px;
+      border-bottom: 2px solid #000;
+    }
+
+    .pv-home-rolling::before,
+    .pv-home-rolling::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      width: 80px;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .pv-home-rolling::before {
+      left: 0;
+      background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .pv-home-rolling::after {
+      right: 0;
+      background: linear-gradient(270deg, #fff 0%, rgba(255,255,255,0) 100%);
+    }
+
+    .pv-home-rolling-track {
+      display: flex;
+      gap: 16px;
+      width: max-content;
+      animation: pvRollingApplications 34s linear infinite;
+    }
+
+    .pv-home-rolling:hover .pv-home-rolling-track {
+      animation-play-state: paused;
+    }
+
+    .pv-home-app-card {
+      width: 280px;
+      flex: 0 0 auto;
+      display: block;
+    }
+
+    .pv-home-app-img {
+      width: 100%;
+      aspect-ratio: 1.48 / 1;
+      overflow: hidden;
+      background: #f4f5f6;
+      border-radius: 4px;
+    }
+
+    .pv-home-app-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+
+    .pv-home-app-card:hover .pv-home-app-img img {
+      transform: scale(1.045);
+    }
+
+    .pv-home-app-title {
+      margin: 14px 0 0;
+      color: #000;
+      font-size: 17px;
+      font-weight: 650;
+      line-height: 1.15;
+      letter-spacing: -0.045em;
+    }
+
+    @keyframes pvRollingApplications {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-50% - 8px));
+      }
+    }
+
+    .pv-home-feature {
+      padding: 28px 0 132px;
+      text-align: center;
+    }
+
+    .pv-home-feature-title {
+      margin: 0 0 32px;
+      color: #000;
+      font-size: clamp(28px, 2.3vw, 42px);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -0.06em;
+    }
+
+    .pv-home-feature-desc {
+      max-width: 640px;
+      margin: 0 auto 58px;
+      color: #777;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.75;
+    }
+
+    .pv-home-feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .pv-home-feature-box {
+      min-height: 112px;
+      padding: 28px 24px;
+      background: #f4f5f6;
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-size: 18px;
+      font-weight: 650;
+      line-height: 1.4;
+      letter-spacing: -0.045em;
+    }
+
+    @media (max-width: 1280px) {
+      .pv-home-hero-inner {
+        padding-left: 48px;
+        padding-right: 48px;
+      }
+
+      .pv-home-product-card {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .pv-home-hero,
+      .pv-home-hero-inner {
+        min-height: 680px;
+      }
+
+      .pv-home-hero-inner {
+        padding-top: 104px;
+      }
+
+      .pv-home-hero-copy {
+        width: 54%;
+      }
+
+      .pv-home-product-grid,
+      .pv-home-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pv-home-app-card {
+        width: 260px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pv-home-hero,
+      .pv-home-hero-inner {
+        min-height: 610px;
+      }
+
+      .pv-home-hero-bg img {
+        object-position: 62% center;
+      }
+
+      .pv-home-hero-inner {
+        padding: 78px 22px 54px;
+      }
+
+      .pv-home-hero-copy {
+        width: 78%;
+      }
+
+      .pv-home-hero-lead {
+        margin-bottom: 24px;
+        font-size: 17px;
+      }
+
+      .pv-home-hero-title {
+        font-size: clamp(58px, 15vw, 86px);
+      }
+
+      .pv-home-hero-sub {
+        margin-bottom: 30px;
+        font-size: 14px;
+      }
+
+      .pv-home-hero-logo {
+        margin-top: 96px;
+      }
+
+      .pv-home-intro {
+        padding: 86px 0 64px;
+      }
+
+      .pv-home-intro-title {
+        font-size: 42px;
+      }
+
+      .pv-home-intro-sub {
+        font-size: 23px;
+      }
+
+      .pv-home-intro-desc {
+        font-size: 14px;
+        line-height: 1.72;
+      }
+
+      .pv-home-products {
+        padding: 22px 0 78px;
+      }
+
+      .pv-home-product-grid,
+      .pv-home-feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pv-home-product-card {
+        min-height: auto;
+        padding: 46px 24px 34px;
+      }
+
+      .pv-home-product-img {
+        height: 180px;
+        margin-bottom: 30px;
+      }
+
+      .pv-home-applications {
+        padding-bottom: 78px;
+      }
+
+      .pv-home-app-card {
+        width: 240px;
+      }
+
+      .pv-home-rolling-track {
+        animation-duration: 28s;
+      }
+
+      .pv-home-feature {
+        padding: 10px 0 86px;
+      }
+
+      .pv-home-feature-title {
+        font-size: 28px;
+      }
+
+      .pv-home-feature-desc {
+        margin-bottom: 36px;
+        font-size: 14px;
+      }
+
+      .pv-home-feature-box {
+        min-height: 92px;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pv-home-hero {
+        min-height: 560px;
+      }
+
+      .pv-home-hero-bg img {
+        object-position: 68% center;
+      }
+
+      .pv-home-hero-inner {
+        min-height: 560px;
+      }
+
+      .pv-home-hero-copy {
+        width: 88%;
+      }
+
+      .pv-home-hero-title {
+        font-size: 55px;
+      }
+
+      .pv-home-intro-title {
+        font-size: 36px;
+      }
+
+      .pv-home-intro-sub {
+        font-size: 20px;
+      }
+
+      .pv-home-product-img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="pv-header">
+    <div class="pv-header-inner">
+      <a href="index.html" class="pv-logo" aria-label="Privion Home">
+        <img
+          src="assets/images/logo/privion-logo.png"
+          alt="privion"
+          class="pv-logo-image"
+        >
+      </a>
+
+      <nav class="pv-nav" aria-label="Main Navigation">
+        <a href="technology.html">기술 소개</a>
+        <a href="product.html">제품</a>
+        <a href="application.html">적용 분야</a>
+        <a href="contact.html">문의</a>
+      </nav>
+
+      <div class="pv-header-right">
+        <a href="search.html" class="pv-header-icon" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke-width="1.8"></circle>
+            <path
+              d="M16.5 16.5L21 21"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- HERO -->
+    <section class="pv-home-hero">
+      <div class="pv-home-hero-bg">
+        <img
+          src="assets/images/logo/home-hero.png"
+          alt="DL Series FMCW LiDAR"
+        >
+      </div>
+
+      <div class="pv-home-hero-inner">
+        <div class="pv-home-hero-copy">
+          <p class="pv-home-hero-lead">
+            The World’s First Ultra-Compact,<br>
+            the Next Standard of LiDAR
+          </p>
+
+          <h1 class="pv-home-hero-title">DL series</h1>
+
+          <p class="pv-home-hero-sub">
+            FREQUENCY MODULATED CONTINUOUS WAVE
+          </p>
+
+          <a href="product.html" class="pv-btn pv-btn-line">View more</a>
+
+          <div class="pv-home-hero-logo">
+            <span class="pv-logo">
+              <img
+                src="assets/images/logo/privion-logo.png"
+                alt="privion"
+                class="pv-logo-image"
+              >
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="pv-home-intro">
+      <div class="pv-container">
+        <h2 class="pv-home-intro-title">FMCW LiDAR</h2>
+
+        <h3 class="pv-home-intro-sub">
+          산업 환경을 기준으로 설계한 FMCW LiDAR
+        </h3>
+
+        <p class="pv-home-intro-desc">
+          DL 시리즈는 산업 현장의 복잡한 조건 속에서도 흔들리지 않는 감지를 위한 FMCW LiDAR입니다.<br>
+          환경 변화에 강한 구조와 정밀한 신호 분석 기술을 바탕으로, 자동화와 로봇 시스템에 안정적인 센싱 성능을 제공합니다.<br>
+          자동화 및 로봇 시스템에 필요한 거리와 속도 정보를 더욱 정확하게 확보할 수 있도록 설계되었습니다.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="pv-home-products">
+      <div class="pv-container">
+        <h2 class="pv-section-title">Products</h2>
+
+        <div class="pv-home-product-grid">
+
+          <a href="product-dl100.html" class="pv-home-product-card">
+            <div class="pv-home-product-img">
+              <img
+                src="assets/images/logo/dl100.png"
+                alt="LiDAR DL100"
+              >
+            </div>
+            <p class="pv-home-product-type">Detection Type</p>
+            <h3 class="pv-home-product-name">LiDAR DL100</h3>
+            <p class="pv-home-product-desc">컴팩트 산업용 감지형</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+          <a href="product-dl100s.html" class="pv-home-product-card">
+            <div class="pv-home-product-img">
+              <img
+                src="assets/images/logo/dl100s.png"
+                alt="LiDAR DL100S"
+              >
+            </div>
+            <p class="pv-home-product-type">Scanning Type</p>
+            <h3 class="pv-home-product-name">LiDAR DL100S</h3>
+            <p class="pv-home-product-desc">컴팩트 산업용 스캔형</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+          <a href="product-dl150.html" class="pv-home-product-card">
+            <div class="pv-home-product-img">
+              <img
+                src="assets/images/logo/dl150.png"
+                alt="LiDAR DL150"
+              >
+            </div>
+            <p class="pv-home-product-type">Detection Type</p>
+            <h3 class="pv-home-product-name">LiDAR DL150</h3>
+            <p class="pv-home-product-desc">컴팩트 산업용 감지형</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+          <a href="product-dl150s.html" class="pv-home-product-card">
+            <div class="pv-home-product-img">
+              <img
+                src="assets/images/logo/dl150s.png"
+                alt="LiDAR DL150S"
+              >
+            </div>
+            <p class="pv-home-product-type">Scanning Type</p>
+            <h3 class="pv-home-product-name">LiDAR DL150S</h3>
+            <p class="pv-home-product-desc">컴팩트 산업용 스캔형</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIAL APPLICATIONS ROLLING -->
+    <section class="pv-home-applications">
+      <div class="pv-container">
+        <h2 class="pv-section-title">Industrial Applications</h2>
+
+        <div class="pv-home-rolling">
+          <div class="pv-home-rolling-track">
+
+            <!-- Set 01 -->
+            <a href="application.html" class="pv-home-app-card">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/amr-agv.png" alt="AMR / AGV">
+              </div>
+              <h3 class="pv-home-app-title">AMR / AGV</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/oht.png" alt="OHT">
+              </div>
+              <h3 class="pv-home-app-title">OHT</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/smart-city.png" alt="Smart City">
+              </div>
+              <h3 class="pv-home-app-title">Smart City</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/smart-farm.png" alt="Smart Farm">
+              </div>
+              <h3 class="pv-home-app-title">Smart Farm</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/heavy-machinery.png" alt="Heavy Machinery">
+              </div>
+              <h3 class="pv-home-app-title">Heavy Machinery</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/port-cranes.png" alt="Port Cranes">
+              </div>
+              <h3 class="pv-home-app-title">Port Cranes</h3>
+            </a>
+
+            <!-- Set 02: 무한 롤링용 반복 -->
+            <a href="application.html" class="pv-home-app-card" aria-hidden="true">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/amr-agv.png" alt="">
+              </div>
+              <h3 class="pv-home-app-title">AMR / AGV</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card" aria-hidden="true">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/oht.png" alt="">
+              </div>
+              <h3 class="pv-home-app-title">OHT</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card" aria-hidden="true">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/smart-city.png" alt="">
+              </div>
+              <h3 class="pv-home-app-title">Smart City</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card" aria-hidden="true">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/smart-farm.png" alt="">
+              </div>
+              <h3 class="pv-home-app-title">Smart Farm</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card" aria-hidden="true">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/heavy-machinery.png" alt="">
+              </div>
+              <h3 class="pv-home-app-title">Heavy Machinery</h3>
+            </a>
+
+            <a href="application.html" class="pv-home-app-card" aria-hidden="true">
+              <div class="pv-home-app-img">
+                <img src="assets/images/logo/port-cranes.png" alt="">
+              </div>
+              <h3 class="pv-home-app-title">Port Cranes</h3>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="pv-home-feature">
+      <div class="pv-container">
+        <h2 class="pv-home-feature-title">
+          복잡한 산업 환경에서도 안정적인 감지 성능
+        </h2>
+
+        <p class="pv-home-feature-desc">
+          DL 시리즈는 산업 현장의 복합적인 조건 속에서도 안정적인 센싱 성능을 제공하도록 설계되었습니다.<br>
+          환경 변화에 강한 구조와 정밀한 신호 분석 기술을 바탕으로 거리와 속도 정보를 더욱 정밀하게 확보합니다.
+        </p>
+
+        <div class="pv-home-feature-grid">
+          <div class="pv-home-feature-box">
+            환경 변화에 강한 감지 안정성
+          </div>
+
+          <div class="pv-home-feature-box">
+            거리·속도 정보의 정밀한 분리 추출
+          </div>
+
+          <div class="pv-home-feature-box">
+            자동화·로봇 시스템에 최적화된 설계
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pv-footer">
+    <div class="pv-footer-inner">
+      <div class="pv-footer-left">
+        <a href="index.html" class="pv-logo" aria-label="Privion Home">
+          <img
+            src="assets/images/logo/privion-logo.png"
+            alt="privion"
+            class="pv-logo-image"
+          >
+        </a>
+
+        <p class="pv-footer-info">
+          프리비온 주식회사<br>
+          Web www.privionlidar.com<br>
+          Tel 02-589-2312<br>
+          Email privion-lidar@dongwon.com<br>
+          주소 경기도 성남시 분당구 삼평동 621 판교이노밸리 제B동 6층 604호
+        </p>
+      </div>
+
+      <div class="pv-footer-right">
+        <div class="pv-footer-links">
+          <a href="terms.html">이용약관</a>
+          <a href="privacy.html">개인정보처리방침</a>
+        </div>
+
+        <p class="pv-copy">
+          Copyright © Privion. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/privion-common.js"></script>
+</body>
+</html>
