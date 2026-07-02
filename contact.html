@@ -4,7 +4,7 @@
   <!-- =========================================================
     PRIVION CONTACT PAGE
     문의 페이지입니다.
-    지도는 카카오맵 퍼가기 코드를 사용합니다.
+    지도는 카카오맵 정적 지도 이미지 + 외부 링크 방식으로 구성했습니다.
     이미지 경로는 assets/images/logo/ 기준입니다.
   ========================================================= -->
 
@@ -170,32 +170,74 @@
       color: #fff;
     }
 
+    /* =========================================================
+       STATIC MAP
+    ========================================================= */
+
     .pv-map-area {
       width: 100%;
     }
 
     .pv-map-box {
-      position: relative;
       width: 100%;
-      height: 520px;
       border-radius: 8px;
       overflow: hidden;
       background: #f3f4f5;
     }
 
-    /* 카카오맵 퍼가기 반응형 보정 */
-    .pv-map-box .root_daum_roughmap {
-      width: 100% !important;
-      height: 100% !important;
+    .pv-kakao-map-card {
+      display: block;
+      width: 100%;
+      color: inherit;
+      text-decoration: none;
+      background: #fff;
     }
 
-    .pv-map-box .root_daum_roughmap .wrap_map {
-      width: 100% !important;
-      height: 100% !important;
+    .pv-kakao-map-image {
+      width: 100%;
+      aspect-ratio: 640 / 360;
+      overflow: hidden;
+      background: #f3f4f5;
     }
 
-    .pv-map-box .root_daum_roughmap .wrap_controllers {
-      display: none !important;
+    .pv-kakao-map-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      border: 0;
+    }
+
+    .pv-kakao-map-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 13px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-top: 0;
+      background: #f9f9f9;
+      color: #000;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .pv-kakao-map-logo {
+      display: block;
+      width: 72px;
+      height: 16px;
+    }
+
+    .pv-kakao-map-link {
+      color: #000;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .pv-kakao-map-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     .pv-download {
@@ -293,10 +335,6 @@
       .pv-contact-item {
         font-size: 15px;
         line-height: 1.6;
-      }
-
-      .pv-map-box {
-        height: 360px;
       }
 
       .pv-download {
@@ -493,11 +531,46 @@
           <!-- MAP -->
           <div class="pv-map-area">
             <div class="pv-map-box">
-              <!-- 카카오맵 - 지도퍼가기 -->
-              <div
-                id="daumRoughmapContainer1782952610139"
-                class="root_daum_roughmap root_daum_roughmap_landing"
-              ></div>
+              <div class="pv-kakao-map-card">
+                <a
+                  href="https://map.kakao.com/?urlX=522363.00000000274&urlY=1084450.0000000012&name=%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%82%BC%ED%8F%89%EB%8F%99%20621&map_type=TYPE_MAP&from=roughmap"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="카카오맵에서 프리비온 위치 보기"
+                  class="pv-kakao-map-image"
+                >
+                  <img
+                    src="https://t1.daumcdn.net/roughmap/imgmap/d3877334321916d00e65f5d6cef3b08b97910d279dbe9e994c723d5b8ba53744"
+                    alt="경기도 성남시 분당구 삼평동 621 판교이노밸리 제B동 6층 604호 지도"
+                  >
+                </a>
+
+                <div class="pv-kakao-map-footer">
+                  <a
+                    href="https://map.kakao.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="카카오맵 바로가기"
+                  >
+                    <img
+                      class="pv-kakao-map-logo"
+                      src="https://t1.kakaocdn.net/localimg/localimages/07/2018/pc/common/logo_kakaomap.png"
+                      width="72"
+                      height="16"
+                      alt="카카오맵"
+                    >
+                  </a>
+
+                  <a
+                    class="pv-kakao-map-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://map.kakao.com/?from=roughmap&eName=%EA%B2%BD%EA%B8%B0%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EC%82%BC%ED%8F%89%EB%8F%99%20621&eX=522363.00000000274&eY=1084450.0000000012"
+                  >
+                    길찾기
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -573,28 +646,6 @@
     </div>
   </footer>
 
-  <!-- Common JS -->
   <script src="assets/js/privion-common.js"></script>
-
-  <!-- Kakao Map Script -->
-  <script
-    charset="UTF-8"
-    class="daum_roughmap_loader_script"
-    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
-  ></script>
-
-  <script charset="UTF-8">
-    window.addEventListener("load", function () {
-      if (window.daum && window.daum.roughmap) {
-        new daum.roughmap.Lander({
-          timestamp: "1782952610139",
-          key: "q5dkafwp9kn",
-          mapWidth: "640",
-          mapHeight: "520"
-        }).render();
-      }
-    });
-  </script>
-
 </body>
 </html>
