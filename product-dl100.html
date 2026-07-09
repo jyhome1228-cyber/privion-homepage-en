@@ -5,6 +5,7 @@
     PRIVION PRODUCT DETAIL PAGE - DL100
     제품 상세 DL100 페이지입니다.
     이미지 경로는 assets/images/logo/ 기준입니다.
+    아이콘 경로는 assets/images/ 기준입니다.
   ========================================================= -->
 
   <meta charset="utf-8">
@@ -14,12 +15,12 @@
 
   <meta
     name="description"
-    content="LiDAR DL100은 컴팩트 산업용 감지형 FMCW LiDAR 제품입니다. 산업 자동화 환경에서 안정적인 장애물 감지를 지원합니다."
+    content="LiDAR DL100은 실내 AGV, AMR 운행 환경에서 안정적인 장애물 감지를 지원하는 컴팩트 산업용 FMCW LiDAR 제품입니다."
   >
 
   <meta
     name="keywords"
-    content="Privion, LiDAR DL100, FMCW LiDAR, 산업용 LiDAR, Detection Type, 라이다"
+    content="Privion, LiDAR DL100, FMCW LiDAR, 산업용 LiDAR, Detection Type, AGV, AMR, 라이다"
   >
 
   <meta property="og:type" content="website">
@@ -35,6 +36,203 @@
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
   >
   <link rel="stylesheet" href="assets/css/privion.css">
+
+  <style>
+    /* =========================================================
+       PRODUCT DETAIL LOCAL STYLE
+    ========================================================= */
+
+    .pv-model-accent {
+      color: #5bb5e5;
+    }
+
+    .pv-feature-icons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 28px;
+    }
+
+    .pv-feature-icon-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 13px 8px 9px;
+      border: 1px solid #e3e7ec;
+      border-radius: 999px;
+      background: #fff;
+      color: #111;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .pv-feature-icon-item img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .pv-other-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 0 16px;
+    }
+
+    .pv-other-icons img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      display: block;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .pv-catalog-section {
+      width: 100%;
+      margin: 108px 0 0;
+      padding: 78px 72px;
+      background: #f3f4f5;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .pv-catalog-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pv-catalog-image img {
+      width: min(100%, 380px);
+      height: auto;
+      display: block;
+    }
+
+    .pv-catalog-title {
+      margin: 0 0 26px;
+      color: #000;
+      font-size: clamp(27px, 2.2vw, 38px);
+      font-weight: 760;
+      line-height: 1.2;
+      letter-spacing: -0.065em;
+    }
+
+    .pv-catalog-desc {
+      max-width: 580px;
+      margin: 0 0 38px;
+      color: #777;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.82;
+      letter-spacing: -0.035em;
+      word-break: keep-all;
+    }
+
+    /* =========================================================
+       FOOTER OVERRIDE
+    ========================================================= */
+
+    .pv-footer {
+      padding: 0;
+      background: transparent;
+    }
+
+    .pv-footer-inner {
+      min-height: auto;
+      padding: 58px 84px;
+      background: #000;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 60px;
+    }
+
+    .pv-footer-info {
+      margin-top: 24px;
+      line-height: 1.72;
+    }
+
+    .pv-footer-links {
+      display: none;
+    }
+
+    .pv-footer-right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      min-height: 120px;
+    }
+
+    .pv-copy {
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .pv-catalog-section {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        padding: 68px 44px;
+      }
+
+      .pv-catalog-image {
+        justify-content: flex-start;
+      }
+
+      .pv-footer-inner {
+        padding: 52px 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pv-feature-icons {
+        margin-bottom: 22px;
+      }
+
+      .pv-feature-icon-item {
+        font-size: 12px;
+      }
+
+      .pv-feature-icon-item img {
+        width: 28px;
+        height: 28px;
+      }
+
+      .pv-catalog-section {
+        margin-top: 78px;
+        padding: 58px 24px;
+      }
+
+      .pv-catalog-title {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+
+      .pv-catalog-desc {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.72;
+      }
+
+      .pv-footer-inner {
+        padding: 44px 28px;
+        flex-direction: column;
+        gap: 34px;
+      }
+
+      .pv-footer-right {
+        min-height: auto;
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -88,23 +286,23 @@
         <div class="pv-product-hero-text">
           <p class="pv-product-type">Detection Type</p>
           <h1 class="pv-product-name">LiDAR DL100</h1>
-          <h2 class="pv-product-sub">컴팩트 산업용 감지형</h2>
+          <h2 class="pv-product-sub">컴팩트 산업용 감지형 LiDAR</h2>
+
+          <div class="pv-feature-icons" aria-label="Product function icons">
+            <div class="pv-feature-icon-item">
+              <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+              <span>감지</span>
+            </div>
+          </div>
 
           <p class="pv-product-desc">
-            DL100은 산업 자동화 환경에서 안정적인 장애물 감지를 위해 설계된 FMCW 기반 LiDAR입니다.<br>
-            1550nm 파장에 레이저를 적용해 안개와 주변광 간섭 등 복합적인 센싱 환경에서도<br>
-            감지 성능을 일관되게 유지합니다. 자동화 설비 및 이동 로봇의 안전 영역 감지에 최적화된 모델입니다.
+            DL100은 AGV, AMR이 운행되는 실내 자동화 환경에서 장애물을 안정적으로 감지합니다.<br>
+            분진, 창문을 통해 유입되는 햇빛 등 실내 환경에서 발생할 수 있는 오감지 요인에서도<br>
+            일관된 성능을 유지하며, 10m 검출 거리로 이동 로봇의 안전 영역 감지에 적합합니다.
           </p>
 
           <div class="pv-product-actions">
             <a href="contact.html" class="pv-btn pv-btn-gray">Contact</a>
-            <a
-              href="assets/download/privion-dl-series-catalog.pdf"
-              class="pv-btn pv-btn-black"
-              download
-            >
-              Download
-            </a>
           </div>
         </div>
       </section>
@@ -263,7 +461,8 @@
             </div>
             <h3 class="pv-detail-app-title">AMR / AGV</h3>
             <p class="pv-detail-app-desc">
-              AMR/AGV의 안정적인 자율 주행을 지원합니다. 실내 산업 환경과 SLAM 기반 주행 인식 등에서 반복적인 설비 흐름을 정밀하게 판단합니다.
+              실내 물류 및 제조 자동화 환경에서 AMR/AGV의 안정적인 이동을 지원합니다.
+              이동 경로 내 장애물과 안전 영역을 감지해 반복적인 설비 흐름을 정밀하게 판단할 수 있습니다.
             </p>
           </article>
 
@@ -276,7 +475,8 @@
             </div>
             <h3 class="pv-detail-app-title">OHT</h3>
             <p class="pv-detail-app-desc">
-              정밀 제조 라인을 위한 LiDAR는 정밀 센싱 환경에서도 높은 감지 성능을 제공합니다. 미세한 위치 오차까지 인식해 OHT 시스템의 안정적인 이송을 지원합니다.
+              정밀 제조 라인을 위한 LiDAR는 복잡한 설비 환경에서도 높은 감지 성능을 제공합니다.
+              이송 동선 주변의 장애 요소를 인식해 OHT 시스템의 안정적인 운영을 지원합니다.
             </p>
           </article>
 
@@ -289,7 +489,8 @@
             </div>
             <h3 class="pv-detail-app-title">Smart City</h3>
             <p class="pv-detail-app-desc">
-              스마트시티 환경에서 사람·차량·인프라를 동시에 인식합니다. 도심의 복합 환경에서도 필요한 감지 체계를 지원합니다.
+              스마트시티 환경에서 사람, 차량, 인프라 주변의 움직임을 감지하는 데 활용될 수 있습니다.
+              복합적인 도심 환경에서도 필요한 감지 체계를 지원합니다.
             </p>
           </article>
 
@@ -302,7 +503,8 @@
             </div>
             <h3 class="pv-detail-app-title">Heavy Machinery</h3>
             <p class="pv-detail-app-desc">
-              광산, 건설 및 토목 현장에서 발생하는 거친 환경에서도 주변 장애물과 작업 반경을 감지하는 데 활용됩니다.
+              제조, 물류, 설비 현장에서 장비 주변의 작업 반경과 장애물을 감지하는 데 활용됩니다.
+              제한된 공간에서도 안정적인 감지 기준을 제공합니다.
             </p>
           </article>
 
@@ -315,7 +517,8 @@
             </div>
             <h3 class="pv-detail-app-title">Smart Farm</h3>
             <p class="pv-detail-app-desc">
-              스마트팜 환경은 고저차나 반사 조건 등 일부 조건에서도 안정적인 감지 성능을 필요로 합니다.
+              스마트팜 환경은 구조물, 작물, 이동 장비가 함께 존재하기 때문에 안정적인 감지 성능을 필요로 합니다.
+              반복 주행 장비와 자동화 설비의 안전한 운용을 지원합니다.
             </p>
           </article>
 
@@ -328,10 +531,41 @@
             </div>
             <h3 class="pv-detail-app-title">Port Cranes</h3>
             <p class="pv-detail-app-desc">
-              항만 크레인과 대형 구조물의 운영 환경에서 크레인과 주변 구조물의 위치 인식이 안정적으로 이뤄질 수 있도록 지원합니다.
+              대형 구조물과 장비가 함께 운용되는 환경에서 주변 장애물과 작업 영역을 감지할 수 있도록 지원합니다.
+              장비 운용 시 필요한 안전 감지 체계에 활용됩니다.
             </p>
           </article>
 
+        </div>
+      </section>
+
+      <!-- CATALOG DOWNLOAD -->
+      <section class="pv-catalog-section">
+        <div class="pv-catalog-image">
+          <img
+            src="assets/images/logo/catalog-cover.png"
+            alt="Privion DL Series Catalog"
+          >
+        </div>
+
+        <div class="pv-catalog-content">
+          <h2 class="pv-catalog-title">
+            산업 환경을 위한 정밀 센싱 솔루션
+          </h2>
+
+          <p class="pv-catalog-desc">
+            프리비온의 기술과 제품 구성을 한눈에 확인할 수 있는 소개 자료입니다.
+            산업 자동화와 로봇 시스템에 필요한 감지 안정성, 정밀한 센싱 성능, 주요 적용 분야를 함께 살펴볼 수 있으며,
+            실제 산업 환경을 고려한 기술적 특징과 제품 활용 방향까지 폭넓게 확인할 수 있습니다.
+          </p>
+
+          <a
+            href="assets/download/privion-dl-series-catalog.pdf"
+            class="pv-btn pv-btn-black"
+            download
+          >
+            Download
+          </a>
         </div>
       </section>
 
@@ -348,9 +582,15 @@
                 alt="LiDAR DL100S"
               >
             </div>
-            <p class="pv-other-type">Scanning Type</p>
-            <h3 class="pv-other-name">LiDAR DL100S</h3>
-            <p class="pv-other-desc">컴팩트 산업용 스캔형</p>
+
+            <div class="pv-other-icons" aria-label="DL100S function icons">
+              <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+              <img src="assets/images/icon2.jpg" alt="스캔 아이콘">
+            </div>
+
+            <p class="pv-other-type">Detection / Scanning Type</p>
+            <h3 class="pv-other-name">LiDAR DL100<span class="pv-model-accent">S</span></h3>
+            <p class="pv-other-desc">컴팩트 산업용 감지/스캔형 LiDAR</p>
             <span class="pv-btn pv-btn-white">View more</span>
           </a>
 
@@ -361,9 +601,14 @@
                 alt="LiDAR DL150"
               >
             </div>
+
+            <div class="pv-other-icons" aria-label="DL150 function icons">
+              <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+            </div>
+
             <p class="pv-other-type">Detection Type</p>
             <h3 class="pv-other-name">LiDAR DL150</h3>
-            <p class="pv-other-desc">컴팩트 산업용 감지형</p>
+            <p class="pv-other-desc">야외환경 산업용 감지형 LiDAR</p>
             <span class="pv-btn pv-btn-white">View more</span>
           </a>
 
@@ -374,9 +619,15 @@
                 alt="LiDAR DL150S"
               >
             </div>
-            <p class="pv-other-type">Scanning Type</p>
-            <h3 class="pv-other-name">LiDAR DL150S</h3>
-            <p class="pv-other-desc">컴팩트 산업용 스캔형</p>
+
+            <div class="pv-other-icons" aria-label="DL150S function icons">
+              <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+              <img src="assets/images/icon2.jpg" alt="스캔 아이콘">
+            </div>
+
+            <p class="pv-other-type">Detection / Scanning Type</p>
+            <h3 class="pv-other-name">LiDAR DL150<span class="pv-model-accent">S</span></h3>
+            <p class="pv-other-desc">야외환경 산업용 감지/스캔형 LiDAR</p>
             <span class="pv-btn pv-btn-white">View more</span>
           </a>
 
@@ -399,7 +650,7 @@
         </a>
 
         <p class="pv-footer-info">
-          프리비온 주식회사<br>
+          동원산업(주)<br>
           Web www.privionlidar.com<br>
           Tel 02-589-2312<br>
           Email privion-lidar@dongwon.com<br>
@@ -408,11 +659,6 @@
       </div>
 
       <div class="pv-footer-right">
-        <div class="pv-footer-links">
-          <a href="terms.html">이용약관</a>
-          <a href="privacy.html">개인정보처리방침</a>
-        </div>
-
         <p class="pv-copy">
           Copyright © Privion. All rights reserved.
         </p>
