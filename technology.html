@@ -22,12 +22,27 @@
     content="Privion, FMCW LiDAR, 라이다, 산업용 LiDAR, ToF LiDAR, 1550nm, 센싱 기술"
   >
 
+  <meta name="author" content="Privion">
+  <meta name="contact" content="privion-lidar@dongwon.com">
+  <meta name="telephone" content="02-589-2312">
+
+  <!-- Naver Site Verification -->
+  <meta name="naver-site-verification" content="7a2d3bdc939d1acfb9933c8ee472e83bf4a1f71d">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="기술 소개 | Privion">
   <meta property="og:description" content="산업 환경을 기준으로 설계한 FMCW LiDAR 기술 소개">
   <meta property="og:url" content="https://www.privionlidar.com/technology.html">
   <meta property="og:image" content="https://www.privionlidar.com/assets/images/logo/fmcw-main.png">
   <meta property="og:site_name" content="Privion">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="기술 소개 | Privion">
+  <meta name="twitter:description" content="산업 환경을 기준으로 설계한 FMCW LiDAR 기술 소개">
+  <meta name="twitter:image" content="https://www.privionlidar.com/assets/images/logo/fmcw-main.png">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link
@@ -256,22 +271,29 @@
     }
 
     /* =========================================================
-       FOOTER OVERRIDE
+       FOOTER COMMON OVERRIDE
+       검정 배경 전체폭 적용
     ========================================================= */
 
     .pv-footer {
+      width: 100%;
+      margin: 0;
       padding: 0;
-      background: transparent;
+      background: #000;
     }
 
     .pv-footer-inner {
+      width: 100%;
+      max-width: none;
       min-height: auto;
-      padding: 58px 84px;
+      margin: 0;
+      padding: 58px max(84px, calc((100vw - 1280px) / 2 + 64px));
       background: #000;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 60px;
+      box-sizing: border-box;
     }
 
     .pv-footer-info {
