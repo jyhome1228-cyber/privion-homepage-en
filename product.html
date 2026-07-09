@@ -148,7 +148,7 @@
     }
 
     .pv-product-sub {
-      margin: 0 0 24px;
+      margin: 0 0 22px;
       color: #111;
       font-size: 16px;
       font-weight: 600;
@@ -156,34 +156,36 @@
       letter-spacing: -0.04em;
     }
 
+    /* 아이콘 표기: 라운드 박스 제거 */
     .pv-product-icons {
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin: 0 0 28px;
+      gap: 24px;
+      margin: 0 0 30px;
     }
 
     .pv-product-icon-item {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 13px 8px 9px;
-      border: 1px solid #e3e7ec;
-      border-radius: 999px;
-      background: #fff;
+      gap: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
       color: #111;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 15px;
+      font-weight: 700;
       line-height: 1;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.04em;
     }
 
     .pv-product-icon-item img {
-      width: 30px;
-      height: 30px;
+      width: 38px;
+      height: 38px;
       object-fit: contain;
       display: block;
-      border-radius: 6px;
+      border-radius: 0;
+      background: transparent;
     }
 
     .pv-product-desc {
@@ -251,22 +253,29 @@
     }
 
     /* =========================================================
-       FOOTER OVERRIDE
+       FOOTER COMMON OVERRIDE
+       검정 배경 전체폭 적용
     ========================================================= */
 
     .pv-footer {
+      width: 100%;
+      margin: 0;
       padding: 0;
-      background: transparent;
+      background: #000;
     }
 
     .pv-footer-inner {
+      width: 100%;
+      max-width: none;
       min-height: auto;
-      padding: 58px 84px;
+      margin: 0;
+      padding: 58px max(84px, calc((100vw - 1280px) / 2 + 64px));
       background: #000;
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 60px;
+      box-sizing: border-box;
     }
 
     .pv-footer-info {
@@ -367,16 +376,17 @@
       }
 
       .pv-product-icons {
-        margin-bottom: 22px;
+        gap: 20px;
+        margin-bottom: 24px;
       }
 
       .pv-product-icon-item {
-        font-size: 12px;
+        font-size: 14px;
       }
 
       .pv-product-icon-item img {
-        width: 28px;
-        height: 28px;
+        width: 34px;
+        height: 34px;
       }
 
       .pv-product-desc {
