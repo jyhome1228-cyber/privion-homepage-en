@@ -1,1656 +1,739 @@
-/* ================================
-   HAVE A SEAT RENEWAL
-   Jackson Chameleon inspired editorial catalog style
-   Final common stylesheet
-================================ */
-
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-
-:root {
-  --bg: #f4f2ed;
-  --text: #3e332f;
-  --sub: #776d68;
-  --muted: #a49b95;
-  --line: rgba(62, 51, 47, 0.14);
-  --line-strong: rgba(62, 51, 47, 0.24);
-  --panel: #ebe8e2;
-
-  --max: 1280px;
-  --wide: 1480px;
-  --inner: 1040px;
-}
-
-/* ================================
-   RESET
-================================ */
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  letter-spacing: -0.025em;
-  word-break: keep-all;
-}
-
-body {
-  font-size: 14px;
-  line-height: 1.8;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-button {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-}
-
-.pc-br {
-  display: block;
-}
-
-/* ================================
-   HEADER
-================================ */
-
-.hs-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  height: 72px;
-  background: rgba(244, 242, 237, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-
-.hs-header.is-scrolled {
-  box-shadow: 0 8px 24px rgba(62, 51, 47, 0.04);
-}
-
-.hs-header__inner {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 180px 1fr auto;
-  align-items: center;
-  gap: 40px;
-  padding: 0 40px;
-}
-
-.hs-logo {
-  width: 158px;
-  line-height: 0;
-}
-
-.hs-logo img {
-  width: 100%;
-  height: auto;
-}
-
-.hs-nav {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.hs-nav a {
-  position: relative;
-  height: 72px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  opacity: 0.86;
-}
-
-.hs-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 23px;
-  width: 0;
-  height: 1px;
-  background: var(--text);
-  transition: width 0.24s ease;
-}
-
-.hs-nav a:hover::after {
-  width: 100%;
-}
-
-.hs-util {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--sub);
-}
-
-/* ================================
-   COMMON LAYOUT
-================================ */
-
-.home-wrap,
-.brand-wrap,
-.shop-wrap,
-.b2b-wrap {
-  width: min(calc(100% - 80px), var(--max));
-  margin: 0 auto;
-}
-
-.home-wide,
-.brand-wide,
-.shop-wide {
-  width: min(calc(100% - 80px), var(--wide));
-  margin: 0 auto;
-}
-
-.home-inner,
-.brand-inner,
-.shop-inner,
-.b2b-inner {
-  width: min(100%, var(--inner));
-  margin: 0 auto;
-}
-
-.home-section,
-.brand-section,
-.shop-section,
-.b2b-section {
-  padding: 76px 0;
-  border-top: 1px solid var(--line);
-}
-
-.home-section:first-child,
-.brand-section:first-child,
-.shop-section:first-child,
-.b2b-section:first-child {
-  border-top: 0;
-}
-
-.section-head {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-  padding-bottom: 38px;
-}
-
-.section-label {
-  margin: 0 0 10px;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.section-title {
-  margin: 0;
-  max-width: 680px;
-  font-size: 22px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.section-desc {
-  margin: 0;
-  max-width: 700px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.line-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 126px;
-  height: 40px;
-  padding: 0 18px;
-  border: 1px solid var(--line-strong);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--text);
-  white-space: nowrap;
-  transition: 0.24s ease;
-}
-
-.line-button:hover {
-  background: var(--text);
-  color: var(--bg);
-}
-
-/* ================================
-   INDEX / HOME
-================================ */
-
-.home-page {
-  padding-bottom: 0;
-}
-
-.home-hero {
-  padding: 54px 0 72px;
-}
-
-.home-hero__inner {
-  width: min(calc(100% - 80px), var(--max));
-  margin: 0 auto;
-}
-
-.home-hero__head {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-  padding-bottom: 42px;
-}
-
-.home-hero__label {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.home-hero__title {
-  margin: 0;
-  max-width: 620px;
-  font-size: 34px;
-  line-height: 1.22;
-  font-weight: 700;
-  letter-spacing: -0.055em;
-  color: var(--text);
-}
-
-.home-hero__desc {
-  margin: 20px 0 0;
-  max-width: 620px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.home-hero__buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.home-hero__visual {
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.home-hero__visual img {
-  aspect-ratio: 16 / 8.4;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* ================================
-   CATEGORY
-================================ */
-
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
-}
-
-.category-card {
-  min-height: 220px;
-  padding: 28px 26px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.category-card__num {
-  display: block;
-  margin-bottom: 42px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-.category-card h3 {
-  margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 1.45;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.category-card p {
-  margin: 0;
-  max-width: 240px;
-  font-size: 13px;
-  line-height: 1.85;
-  color: var(--sub);
-}
-
-/* ================================
-   PRODUCT GRID
-================================ */
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-left: 1px solid var(--line-strong);
-  width: 100%;
-  margin: 0 auto;
-}
-
-.product-grid.is-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.shop-page .product-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  width: min(calc(100% - 80px), var(--wide));
-}
-
-.product-card {
-  position: relative;
-  min-height: 500px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.shop-page .product-card {
-  min-height: 540px;
-}
-
-.product-card__type {
-  position: absolute;
-  top: 18px;
-  right: 20px;
-  z-index: 2;
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
-.product-card__num {
-  position: absolute;
-  top: 18px;
-  left: 20px;
-  z-index: 2;
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
-.product-card__image {
-  min-height: 370px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 58px 42px 28px;
-}
-
-.shop-page .product-card__image {
-  min-height: 408px;
-  padding: 64px 48px 30px;
-}
-
-.product-card__image img {
-  width: 100%;
-  height: 270px;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-.shop-page .product-card__image img {
-  height: 300px;
-}
-
-.product-card:hover .product-card__image img {
-  transform: scale(1.025);
-}
-
-.product-card__info {
-  padding: 0 24px 30px;
-  text-align: center;
-}
-
-.shop-page .product-card__info {
-  padding-bottom: 32px;
-}
-
-.product-card__name {
-  margin: 0 0 5px;
-  font-size: 13px;
-  line-height: 1.55;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.product-card__price {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.55;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.product-card__color {
-  margin: 8px 0 0;
-  font-size: 11px;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
-/* ================================
-   SPLIT SECTION
-================================ */
-
-.split-section {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-}
-
-.split-content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 42px;
-  align-items: start;
-}
-
-.split-copy h2 {
-  margin: 0;
-  max-width: 580px;
-  font-size: 22px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.split-copy p {
-  margin: 16px 0 0;
-  max-width: 640px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.split-copy .line-button {
-  margin-top: 24px;
-}
-
-.split-image {
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.split-image img {
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* ================================
-   SHOWROOM CTA
-================================ */
-
-.showroom-cta {
-  position: relative;
-  min-height: 310px;
-  overflow: hidden;
-  background: var(--panel);
-  border-top: 1px solid var(--line);
-}
-
-.showroom-cta__bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.showroom-cta__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 0.72;
-  filter: grayscale(6%);
-}
-
-.showroom-cta::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: rgba(62, 51, 47, 0.24);
-}
-
-.showroom-cta__content {
-  position: relative;
-  z-index: 3;
-  min-height: 310px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 50px 20px;
-}
-
-.showroom-cta__title {
-  margin: 0;
-  font-size: 26px;
-  line-height: 1.25;
-  font-weight: 600;
-  letter-spacing: -0.03em;
-}
-
-.showroom-cta__desc {
-  margin: 12px 0 18px;
-  font-size: 13px;
-  line-height: 1.75;
-  font-weight: 400;
-}
-
-.showroom-cta__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 96px;
-  height: 34px;
-  padding: 0 16px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--text);
-  font-size: 12px;
-  font-weight: 500;
-  transition: 0.24s ease;
-}
-
-.showroom-cta__button:hover {
-  background: var(--text);
-  color: #fff;
-}
-
-/* ================================
-   BRAND / ORDERMADE COMMON PAGE
-================================ */
-
-.brand-page {
-  padding-bottom: 0;
-}
-
-.brand-hero {
-  padding: 54px 0 72px;
-}
-
-.brand-hero__head {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-  padding-bottom: 42px;
-}
-
-.brand-hero__label {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.brand-hero__title {
-  margin: 0;
-  max-width: 660px;
-  font-size: 34px;
-  line-height: 1.22;
-  font-weight: 700;
-  letter-spacing: -0.055em;
-  color: var(--text);
-}
-
-.brand-hero__desc {
-  margin: 20px 0 0;
-  max-width: 690px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.brand-hero__visual {
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.brand-hero__visual img {
-  aspect-ratio: 16 / 8.4;
-  object-fit: cover;
-  object-position: center;
-}
-
-.brand-intro {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-}
-
-.brand-intro__copy h2 {
-  margin: 0;
-  max-width: 640px;
-  font-size: 22px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.brand-intro__copy p {
-  margin: 18px 0 0;
-  max-width: 700px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.brand-intro__image {
-  margin-top: 42px;
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.brand-intro__image img {
-  aspect-ratio: 16 / 8.6;
-  object-fit: cover;
-  object-position: center;
-}
-
-.brand-value-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
-}
-
-.brand-value {
-  min-height: 260px;
-  padding: 30px 28px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.brand-value__label {
-  display: block;
-  margin-bottom: 48px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.brand-value h3 {
-  margin: 0 0 14px;
-  font-size: 18px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.brand-value p {
-  margin: 0;
-  max-width: 430px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.consider-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
-}
-
-.consider-card {
-  min-height: 230px;
-  padding: 26px 24px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.consider-card__num {
-  display: block;
-  margin-bottom: 48px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-.consider-card h3 {
-  margin: 0 0 10px;
-  font-size: 15px;
-  line-height: 1.45;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.consider-card p {
-  margin: 0;
-  max-width: 220px;
-  font-size: 13px;
-  line-height: 1.85;
-  color: var(--sub);
-}
-
-.brand-image-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 24px;
-  align-items: start;
-}
-
-.brand-image-stack {
-  display: grid;
-  gap: 24px;
-}
-
-.brand-image {
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.brand-image img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.45s ease;
-}
-
-.brand-image:hover img {
-  transform: scale(1.02);
-}
-
-.brand-image--large img {
-  aspect-ratio: 16 / 10.4;
-}
-
-.brand-image--small img {
-  aspect-ratio: 4 / 3;
-}
-
-.brand-image-caption {
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  align-items: start;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 12px;
-}
-
-.brand-image-caption strong {
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.brand-image-caption span {
-  font-size: 11px;
-  line-height: 1.6;
-  color: var(--muted);
-}
-
-.brand-cta {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr) auto;
-  gap: 40px;
-  align-items: center;
-}
-
-.brand-cta h2 {
-  margin: 0 0 8px;
-  font-size: 20px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
-.brand-cta p {
-  margin: 0;
-  max-width: 640px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-/* ================================
-   SHOP PAGE
-================================ */
-
-.shop-page {
-  padding-bottom: 0;
-}
-
-.shop-hero {
-  padding: 54px 0 62px;
-  border-bottom: 1px solid var(--line);
-}
-
-.shop-hero__head {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-}
-
-.shop-hero__label {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.shop-hero__title {
-  margin: 0;
-  max-width: 660px;
-  font-size: 34px;
-  line-height: 1.22;
-  font-weight: 700;
-  letter-spacing: -0.055em;
-  color: var(--text);
-}
-
-.shop-hero__desc {
-  margin: 20px 0 0;
-  max-width: 690px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.shop-category {
-  padding: 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.shop-category__inner {
-  width: min(calc(100% - 80px), var(--wide));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 40px;
-  min-height: 64px;
-}
-
-.shop-category__tabs {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.shop-category__tabs::-webkit-scrollbar {
-  display: none;
-}
-
-.shop-category__tabs a {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  height: 64px;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--sub);
-  white-space: nowrap;
-}
-
-.shop-category__tabs a.is-active {
-  color: var(--text);
-}
-
-.shop-category__tabs a.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 1px;
-  background: var(--text);
-}
-
-.shop-category__count {
-  font-size: 12px;
-  color: var(--muted);
-  white-space: nowrap;
-}
-
-.shop-toolbar {
-  width: min(calc(100% - 80px), var(--wide));
-  margin: 0 auto;
-  min-height: 56px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 30px;
-  border-bottom: 1px solid var(--line);
-}
-
-.shop-toolbar__left,
-.shop-toolbar__right {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.shop-toolbar__left {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.shop-toolbar__right {
-  justify-content: flex-end;
-}
-
-.shop-sort {
-  font-size: 12px;
-  color: var(--sub);
-}
-
-.shop-view {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.shop-view span {
-  width: 14px;
-  height: 14px;
-  border: 1px solid var(--line-strong);
-  display: inline-block;
-}
-
-.shop-view span.is-active {
-  background: var(--text);
-  border-color: var(--text);
-}
-
-.shop-guide {
-  padding: 74px 0;
-  border-top: 1px solid var(--line);
-}
-
-.shop-guide__inner {
-  width: min(100%, var(--inner));
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr) auto;
-  gap: 40px;
-  align-items: center;
-}
-
-.shop-guide h2 {
-  margin: 0 0 8px;
-  font-size: 20px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
-.shop-guide p {
-  margin: 0;
-  max-width: 640px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-/* ================================
-   B2B PAGE
-================================ */
-
-.b2b-page {
-  padding-bottom: 0;
-}
-
-.b2b-hero {
-  padding: 54px 0 62px;
-  border-bottom: 1px solid var(--line);
-}
-
-.b2b-hero__head {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-}
-
-.b2b-hero__label {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.b2b-hero__title {
-  margin: 0;
-  max-width: 660px;
-  font-size: 34px;
-  line-height: 1.22;
-  font-weight: 700;
-  letter-spacing: -0.055em;
-  color: var(--text);
-}
-
-.b2b-hero__desc {
-  margin: 20px 0 0;
-  max-width: 700px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.b2b-head {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 56px;
-  align-items: start;
-  padding-bottom: 42px;
-  border-bottom: 1px solid var(--line-strong);
-}
-
-.b2b-label {
-  margin: 0 0 10px;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.b2b-title {
-  margin: 0;
-  font-size: 21px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  color: var(--text);
-}
-
-.b2b-title span {
-  color: var(--sub);
-  font-weight: 500;
-}
-
-.b2b-desc {
-  margin: 0;
-  max-width: 660px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.b2b-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  padding-top: 32px;
-}
-
-.b2b-card {
-  border-bottom: 1px solid var(--line);
-}
-
-.b2b-card__image {
-  overflow: hidden;
-  background: var(--panel);
-}
-
-.b2b-card__image img {
-  aspect-ratio: 16 / 9.7;
-  object-fit: cover;
-  transition: transform 0.45s ease;
-}
-
-.b2b-card:hover .b2b-card__image img {
-  transform: scale(1.02);
-}
-
-.b2b-card__meta {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 20px;
-  min-height: 46px;
-  padding: 10px 0 11px;
-}
-
-.b2b-card__meta strong {
-  display: block;
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.b2b-card__meta span {
-  color: var(--sub);
-  font-weight: 500;
-}
-
-.b2b-card__num {
-  font-size: 11px;
-  color: var(--muted);
-}
-
-.b2b-list {
-  border-top: 1px solid var(--line-strong);
-}
-
-.b2b-list__row {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  gap: 56px;
-  padding: 31px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.b2b-list__title h3 {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.b2b-list__title span {
-  display: block;
-  margin-top: 4px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--muted);
-}
-
-.b2b-list__body p {
-  margin: 0;
-  max-width: 700px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-.b2b-list__body p + p {
-  margin-top: 8px;
-}
-
-.b2b-list__body small {
-  display: block;
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.75;
-  color: var(--muted);
-}
-
-.b2b-steps {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
-}
-
-.b2b-step {
-  min-height: 210px;
-  padding: 26px 24px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
-  background: transparent;
-}
-
-.b2b-step__num {
-  width: 34px;
-  height: 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  margin-bottom: 42px;
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--sub);
-}
-
-.b2b-step h3 {
-  margin: 0 0 10px;
-  font-size: 15px;
-  line-height: 1.45;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.b2b-step p {
-  margin: 0;
-  max-width: 220px;
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--sub);
-}
-
-.b2b-cta {
-  display: grid;
-  grid-template-columns: 320px minmax(0, 1fr) auto;
-  gap: 40px;
-  align-items: center;
-}
-
-.b2b-cta h2 {
-  margin: 0 0 8px;
-  font-size: 20px;
-  line-height: 1.45;
-  font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
-.b2b-cta p {
-  margin: 0;
-  max-width: 620px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: var(--sub);
-}
-
-/* ================================
-   FOOTER
-================================ */
-
-.hs-footer {
-  border-top: 1px solid var(--line);
-  padding: 48px 40px 30px;
-  background: #e8e5df;
-}
-
-.hs-footer__grid {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 0.8fr;
-  gap: 70px;
-}
-
-.hs-footer h4 {
-  margin: 0 0 18px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--text);
-}
-
-.hs-footer p,
-.hs-footer a {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.85;
-  color: var(--sub);
-}
-
-.hs-footer__copy {
-  margin-top: 12px !important;
-  color: var(--text) !important;
-  font-weight: 500;
-}
-
-.hs-footer__bottom {
-  margin-top: 42px;
-  padding-top: 16px;
-  border-top: 1px solid var(--line);
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  font-size: 11px;
-  color: var(--muted);
-  flex-wrap: wrap;
-}
-
-/* ================================
-   JS STATES
-================================ */
-
-.js-reveal {
-  opacity: 0;
-  transform: translateY(14px);
-  transition:
-    opacity 0.55s ease,
-    transform 0.55s ease;
-}
-
-.js-reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 1080px) {
-  .hs-header__inner {
-    grid-template-columns: 160px 1fr;
-    padding: 0 24px;
-  }
-
-  .hs-util {
-    display: none;
-  }
-
-  .home-hero__head,
-  .brand-hero__head,
-  .shop-hero__head,
-  .b2b-hero__head,
-  .section-head,
-  .split-section,
-  .brand-intro,
-  .brand-cta,
-  .shop-guide__inner,
-  .b2b-head,
-  .b2b-list__row,
-  .b2b-cta {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .split-content,
-  .brand-image-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-grid,
-  .product-grid.is-3,
-  .shop-page .product-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .brand-value-grid,
-  .b2b-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .consider-grid,
-  .b2b-steps {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hs-footer__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 760px) {
-  .pc-br {
-    display: none;
-  }
-
-  .hs-header {
-    height: 64px;
-  }
-
-  .hs-header__inner {
-    height: 64px;
-    grid-template-columns: 1fr;
-  }
-
-  .hs-logo {
-    width: 140px;
-  }
-
-  .hs-nav {
-    display: none;
-  }
-
-  .home-wrap,
-  .home-wide,
-  .home-hero__inner,
-  .brand-wrap,
-  .brand-wide,
-  .shop-wrap,
-  .shop-wide,
-  .b2b-wrap,
-  .shop-category__inner,
-  .shop-toolbar,
-  .shop-page .product-grid {
-    width: min(calc(100% - 28px), 100%);
-  }
-
-  .home-hero,
-  .brand-hero {
-    padding: 38px 0 54px;
-  }
-
-  .shop-hero,
-  .b2b-hero {
-    padding: 38px 0 46px;
-  }
-
-  .home-hero__title,
-  .brand-hero__title,
-  .shop-hero__title,
-  .b2b-hero__title {
-    font-size: 27px;
-    line-height: 1.32;
-  }
-
-  .home-hero__desc,
-  .brand-hero__desc,
-  .shop-hero__desc,
-  .b2b-hero__desc,
-  .section-desc,
-  .split-copy p,
-  .brand-intro__copy p,
-  .brand-value p,
-  .brand-cta p,
-  .shop-guide p,
-  .b2b-desc,
-  .b2b-list__body p,
-  .b2b-cta p {
-    font-size: 13px;
-    line-height: 1.85;
-  }
-
-  .home-hero__visual img,
-  .brand-hero__visual img,
-  .brand-intro__image img {
-    aspect-ratio: 4 / 3;
-  }
-
-  .home-section,
-  .brand-section,
-  .shop-section,
-  .b2b-section {
-    padding: 48px 0;
-  }
-
-  .section-title,
-  .split-copy h2,
-  .brand-intro__copy h2,
-  .b2b-title,
-  .b2b-cta h2 {
-    font-size: 19px;
-    line-height: 1.45;
-  }
-
-  .product-grid,
-  .product-grid.is-3,
-  .shop-page .product-grid,
-  .brand-value-grid,
-  .consider-grid,
-  .b2b-grid,
-  .b2b-steps {
-    grid-template-columns: 1fr;
-  }
-
-  .product-card,
-  .shop-page .product-card {
-    min-height: auto;
-  }
-
-  .product-card__image,
-  .shop-page .product-card__image {
-    min-height: 340px;
-    padding: 58px 42px 26px;
-  }
-
-  .product-card__image img,
-  .shop-page .product-card__image img {
-    height: 250px;
-  }
-
-  .category-card,
-  .brand-value,
-  .consider-card,
-  .b2b-step {
-    min-height: auto;
-  }
-
-  .brand-value__label,
-  .consider-card__num {
-    margin-bottom: 34px;
-  }
-
-  .b2b-step__num {
-    margin-bottom: 28px;
-  }
-
-  .b2b-head {
-    padding-bottom: 30px;
-  }
-
-  .b2b-list__row {
-    padding: 26px 0;
-  }
-
-  .shop-category__inner {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding: 0;
-    gap: 0;
-  }
-
-  .shop-category__tabs {
-    gap: 24px;
-  }
-
-  .shop-category__count {
-    padding: 0 0 18px;
-  }
-
-  .shop-toolbar {
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 10px;
-    padding: 16px 0;
-  }
-
-  .shop-toolbar__right {
-    justify-content: flex-start;
-  }
-
-  .shop-guide {
-    padding: 52px 0;
-  }
-
-  .shop-guide__inner {
-    width: min(calc(100% - 28px), 100%);
-  }
-
-  .shop-guide h2,
-  .brand-cta h2 {
-    font-size: 19px;
-  }
-
-  .showroom-cta,
-  .showroom-cta__content {
-    min-height: 250px;
-  }
-
-  .showroom-cta__title {
-    font-size: 21px;
-  }
-
-  .hs-footer {
-    padding: 40px 18px 28px;
-  }
-
-  .hs-footer__grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .hs-footer__bottom {
-    justify-content: flex-start;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .js-reveal,
-  .product-card__image img,
-  .brand-image img,
-  .b2b-card__image img,
-  .hs-nav a::after,
-  .line-button,
-  .showroom-cta__button {
-    transition: none;
-  }
-
-  .js-reveal {
-    opacity: 1;
-    transform: none;
-  }
-}
+<!doctype html>
+<html lang="ko">
+<head>
+  <!-- =========================================================
+    PRIVION PRODUCT DETAIL PAGE - DL100S
+    제품 상세 DL100S 페이지입니다.
+    이미지 경로는 assets/images/logo/ 기준입니다.
+    아이콘 경로는 assets/images/ 기준입니다.
+  ========================================================= -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LiDAR DL100S | Privion</title>
+
+  <meta
+    name="description"
+    content="LiDAR DL100S는 실내 자동화 환경에서 장애물 감지와 포인트클라우드 데이터 출력을 함께 지원하는 컴팩트 산업용 감지/스캔형 FMCW LiDAR 제품입니다."
+  >
+
+  <meta
+    name="keywords"
+    content="Privion, LiDAR DL100S, FMCW LiDAR, 산업용 LiDAR, Detection Type, Scanning Type, Point Cloud, SLAM, AGV, AMR, 라이다"
+  >
+
+  <meta name="author" content="Privion">
+  <meta name="contact" content="privion-lidar@dongwon.com">
+  <meta name="telephone" content="02-589-2312">
+
+  <!-- Naver Site Verification -->
+  <meta name="naver-site-verification" content="7a2d3bdc939d1acfb9933c8ee472e83bf4a1f71d">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LiDAR DL100S | Privion">
+  <meta property="og:description" content="컴팩트 산업용 감지/스캔형 FMCW LiDAR">
+  <meta property="og:url" content="https://www.privionlidar.com/product-dl100s.html">
+  <meta property="og:image" content="https://www.privionlidar.com/assets/images/logo/dl100s.png">
+  <meta property="og:site_name" content="Privion">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LiDAR DL100S | Privion">
+  <meta name="twitter:description" content="컴팩트 산업용 감지/스캔형 FMCW LiDAR">
+  <meta name="twitter:image" content="https://www.privionlidar.com/assets/images/logo/dl100s.png">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  >
+  <link rel="stylesheet" href="assets/css/privion.css">
+
+  <style>
+    /* =========================================================
+       PRODUCT DETAIL LOCAL STYLE
+    ========================================================= */
+
+    .pv-model-accent {
+      color: #5bb5e5;
+    }
+
+    /* 아이콘 표기: 라운드 박스 제거 */
+    .pv-feature-icons {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin: 0 0 30px;
+    }
+
+    .pv-feature-icon-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: #111;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .pv-feature-icon-item img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      display: block;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .pv-other-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin: 0 0 16px;
+    }
+
+    .pv-other-icon-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: #111;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .pv-other-icon-item img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      display: block;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    .pv-catalog-section {
+      width: 100%;
+      margin: 108px 0 0;
+      padding: 78px 72px;
+      background: #f3f4f5;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .pv-catalog-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pv-catalog-image img {
+      width: min(100%, 380px);
+      height: auto;
+      display: block;
+    }
+
+    .pv-catalog-title {
+      margin: 0 0 26px;
+      color: #000;
+      font-size: clamp(27px, 2.2vw, 38px);
+      font-weight: 760;
+      line-height: 1.2;
+      letter-spacing: -0.065em;
+    }
+
+    .pv-catalog-desc {
+      max-width: 580px;
+      margin: 0 0 38px;
+      color: #777;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.82;
+      letter-spacing: -0.035em;
+      word-break: keep-all;
+    }
+
+    /* =========================================================
+       FOOTER COMMON OVERRIDE
+       검정 배경 전체폭 적용
+    ========================================================= */
+
+    .pv-footer {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+
+    .pv-footer-inner {
+      width: 100%;
+      max-width: none;
+      min-height: auto;
+      margin: 0;
+      padding: 58px max(84px, calc((100vw - 1280px) / 2 + 64px));
+      background: #000;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 60px;
+      box-sizing: border-box;
+    }
+
+    .pv-footer-info {
+      margin-top: 24px;
+      line-height: 1.72;
+    }
+
+    .pv-footer-links {
+      display: none;
+    }
+
+    .pv-footer-right {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      min-height: 120px;
+    }
+
+    .pv-copy {
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .pv-catalog-section {
+        grid-template-columns: 1fr;
+        gap: 42px;
+        padding: 68px 44px;
+      }
+
+      .pv-catalog-image {
+        justify-content: flex-start;
+      }
+
+      .pv-footer-inner {
+        padding: 52px 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pv-feature-icons {
+        gap: 20px;
+        margin-bottom: 24px;
+      }
+
+      .pv-feature-icon-item {
+        font-size: 14px;
+      }
+
+      .pv-feature-icon-item img {
+        width: 34px;
+        height: 34px;
+      }
+
+      .pv-other-icons {
+        gap: 16px;
+      }
+
+      .pv-other-icon-item {
+        font-size: 12px;
+      }
+
+      .pv-other-icon-item img {
+        width: 30px;
+        height: 30px;
+      }
+
+      .pv-catalog-section {
+        margin-top: 78px;
+        padding: 58px 24px;
+      }
+
+      .pv-catalog-title {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+
+      .pv-catalog-desc {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.72;
+      }
+
+      .pv-footer-inner {
+        padding: 44px 28px;
+        flex-direction: column;
+        gap: 34px;
+      }
+
+      .pv-footer-right {
+        min-height: auto;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="pv-header">
+    <div class="pv-header-inner">
+      <a href="index.html" class="pv-logo" aria-label="Privion Home">
+        <img
+          src="assets/images/logo/privion-logo.png"
+          alt="privion"
+          class="pv-logo-image"
+        >
+      </a>
+
+      <nav class="pv-nav" aria-label="Main Navigation">
+        <a href="technology.html">기술 소개</a>
+        <a href="product.html" class="is-active">제품</a>
+        <a href="application.html">적용 분야</a>
+        <a href="contact.html">문의</a>
+      </nav>
+
+      <div class="pv-header-right">
+        <a href="search.html" class="pv-header-icon" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke-width="1.8"></circle>
+            <path
+              d="M16.5 16.5L21 21"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="pv-detail-main">
+    <div class="pv-container">
+
+      <!-- HERO -->
+      <section class="pv-product-hero">
+        <div class="pv-product-hero-image">
+          <img
+            src="assets/images/logo/dl100s.png"
+            alt="LiDAR DL100S"
+          >
+        </div>
+
+        <div class="pv-product-hero-text">
+          <p class="pv-product-type">Detection / Scanning Type</p>
+
+          <h1 class="pv-product-name">
+            LiDAR DL100<span class="pv-model-accent">S</span>
+          </h1>
+
+          <h2 class="pv-product-sub">컴팩트 산업용 감지/스캔형 LiDAR</h2>
+
+          <div class="pv-feature-icons" aria-label="Product function icons">
+            <div class="pv-feature-icon-item">
+              <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+              <span>감지</span>
+            </div>
+
+            <div class="pv-feature-icon-item">
+              <img src="assets/images/icon2.jpg" alt="스캔 아이콘">
+              <span>스캔</span>
+            </div>
+          </div>
+
+          <p class="pv-product-desc">
+            DL100S는 DL100과 동일한 장애물 감지 기능에 로우데이터, 즉 포인트클라우드 데이터를 직접 내보낼 수 있는 모델입니다.<br>
+            장애물 감지는 물론, SLAM 기반 지도 생성과 공간 인식 등 데이터 기반 응용이 필요한 시스템에 적합합니다.<br>
+            실내 AGV, AMR 운행 환경에서 안정적인 감지와 공간 데이터 활용을 함께 지원합니다.
+          </p>
+
+          <div class="pv-product-actions">
+            <a href="contact.html" class="pv-btn pv-btn-gray">Contact</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- BANNER -->
+      <section class="pv-detail-banner">
+        <img
+          src="assets/images/logo/dl100-banner.png"
+          alt="FMCW LiDAR DL100S banner"
+        >
+      </section>
+
+      <!-- SPEC -->
+      <section class="pv-spec-section">
+        <div class="pv-spec-grid">
+          <div class="pv-spec-images">
+            <div class="pv-spec-image">
+              <img
+                src="assets/images/logo/dl100s.png"
+                alt="LiDAR DL100S front"
+              >
+            </div>
+
+            <div class="pv-spec-image">
+              <img
+                src="assets/images/logo/dl100s.png"
+                alt="LiDAR DL100S side"
+              >
+            </div>
+          </div>
+
+          <table class="pv-spec-table">
+            <tbody>
+              <tr>
+                <th>전원</th>
+                <td class="pv-arrow">▶</td>
+                <td>DC 12 ~ 24V</td>
+              </tr>
+              <tr>
+                <th>계측 방식</th>
+                <td class="pv-arrow">▶</td>
+                <td>FMCW(Frequency Modulated Continuous Wave)</td>
+              </tr>
+              <tr>
+                <th>광원</th>
+                <td class="pv-arrow">▶</td>
+                <td>1550nm</td>
+              </tr>
+              <tr>
+                <th>수평 시야각</th>
+                <td class="pv-arrow">▶</td>
+                <td>270°</td>
+              </tr>
+              <tr>
+                <th>스캔 주파수</th>
+                <td class="pv-arrow">▶</td>
+                <td>20Hz</td>
+              </tr>
+              <tr>
+                <th>각 분해능</th>
+                <td class="pv-arrow">▶</td>
+                <td>0.17° ~ 0.35°</td>
+              </tr>
+              <tr>
+                <th>검출 거리</th>
+                <td class="pv-arrow">▶</td>
+                <td>MIN 20cm / MAX 10m</td>
+              </tr>
+              <tr>
+                <th>인터페이스</th>
+                <td class="pv-arrow">▶</td>
+                <td>RS-232, Ethernet</td>
+              </tr>
+              <tr>
+                <th>표시등</th>
+                <td class="pv-arrow">▶</td>
+                <td>4 LEDs(전원, 동작 상태 표시)</td>
+              </tr>
+              <tr>
+                <th>INPUT</th>
+                <td class="pv-arrow">▶</td>
+                <td>5 Input / 최대 3개 감지 영역 설정</td>
+              </tr>
+              <tr>
+                <th>OUTPUT</th>
+                <td class="pv-arrow">▶</td>
+                <td>4 Output(감지 영역 3, 장애 발생 1)</td>
+              </tr>
+              <tr>
+                <th>Data In (Ethernet)</th>
+                <td class="pv-arrow">▶</td>
+                <td>라이다 출력 설정(시야각, 스캔 주파수, 검출대상)</td>
+              </tr>
+              <tr>
+                <th>Data Out</th>
+                <td class="pv-arrow">▶</td>
+                <td>측정 거리 데이터(Point Cloud Data)</td>
+              </tr>
+              <tr>
+                <th>보호 등급</th>
+                <td class="pv-arrow">▶</td>
+                <td>IP65</td>
+              </tr>
+              <tr>
+                <th>동작 온도</th>
+                <td class="pv-arrow">▶</td>
+                <td>-10°C ~ +50°C</td>
+              </tr>
+              <tr>
+                <th>저장 온도</th>
+                <td class="pv-arrow">▶</td>
+                <td>-25°C ~ +75°C</td>
+              </tr>
+              <tr>
+                <th>사이즈</th>
+                <td class="pv-arrow">▶</td>
+                <td>75(W) × 83(D) × 102(H) mm</td>
+              </tr>
+              <tr>
+                <th>무게</th>
+                <td class="pv-arrow">▶</td>
+                <td>370g</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- APPLICATION -->
+      <section class="pv-app-section">
+        <div class="pv-section-head">
+          <h2 class="pv-section-title">
+            다양한 산업 환경에서 적용 가능한 국산 FMCW LiDAR 솔루션
+          </h2>
+
+          <p class="pv-section-desc">
+            프리비온의 LiDAR 제품은 다양한 산업장에서 실제 적용될 수 있도록 각 분야의 구조와 특성을 고려해 설계되었습니다.
+            실내·외부 환경에서 필요한 거리와 속도와 같은 검출 조건을 고도화한 FMCW 감지 기술로 복잡하고 정밀한 자동화 환경까지 대응할 수 있습니다.
+            DL100S는 장애물 감지와 포인트클라우드 데이터 출력을 함께 지원해 SLAM, 공간 인식, 지도 생성이 필요한 시스템에 적합합니다.
+          </p>
+        </div>
+
+        <div class="pv-detail-app-grid">
+
+          <article class="pv-app-card">
+            <div class="pv-detail-app-image">
+              <img
+                src="assets/images/logo/amr-agv.png"
+                alt="AMR / AGV"
+              >
+            </div>
+            <h3 class="pv-detail-app-title">AMR / AGV</h3>
+            <p class="pv-detail-app-desc">
+              실내 물류 및 제조 자동화 환경에서 AMR/AGV의 안정적인 이동을 지원합니다.
+              장애물 감지와 포인트클라우드 데이터를 활용해 주행 경로 인식과 공간 판단에 필요한 데이터를 제공합니다.
+            </p>
+          </article>
+
+          <article class="pv-app-card">
+            <div class="pv-detail-app-image">
+              <img
+                src="assets/images/logo/oht.png"
+                alt="OHT"
+              >
+            </div>
+            <h3 class="pv-detail-app-title">OHT</h3>
+            <p class="pv-detail-app-desc">
+              정밀 제조 라인을 위한 LiDAR는 복잡한 설비 환경에서도 높은 감지 성능을 제공합니다.
+              이송 동선 주변의 장애 요소를 감지하고, 설비 구조 파악에 필요한 거리 데이터를 제공합니다.
+            </p>
+          </article>
+
+          <article class="pv-app-card">
+            <div class="pv-detail-app-image">
+              <img
+                src="assets/images/logo/smart-city.png"
+                alt="Smart City"
+              >
+            </div>
+            <h3 class="pv-detail-app-title">Smart City</h3>
+            <p class="pv-detail-app-desc">
+              스마트시티 환경에서 사람, 차량, 인프라 주변의 움직임을 감지하는 데 활용될 수 있습니다.
+              공간 데이터를 기반으로 복합적인 환경 인식과 분석 체계를 지원합니다.
+            </p>
+          </article>
+
+          <article class="pv-app-card">
+            <div class="pv-detail-app-image">
+              <img
+                src="assets/images/logo/heavy-machinery.png"
+                alt="Heavy Machinery"
+              >
+            </div>
+            <h3 class="pv-detail-app-title">Heavy Machinery</h3>
+            <p class="pv-detail-app-desc">
+              제조, 물류, 설비 현장에서 장비 주변의 작업 반경과 장애물을 감지하는 데 활용됩니다.
+              거리 데이터와 공간 인식 정보를 통해 장비 운영 환경을 보다 정밀하게 파악할 수 있습니다.
+            </p>
+          </article>
+
+          <article class="pv-app-card">
+            <div class="pv-detail-app-image">
+              <img
+                src="assets/images/logo/smart-farm.png"
+                alt="Smart Farm"
+              >
+            </div>
+            <h3 class="pv-detail-app-title">Smart Farm</h3>
+            <p class="pv-detail-app-desc">
+              스마트팜 환경은 구조물, 작물, 이동 장비가 함께 존재하기 때문에 안정적인 감지 성능을 필요로 합니다.
+              반복 주행 장비와 자동화 설비의 공간 인식 및 안전한 운용을 지원합니다.
+            </p>
+          </article>
+
+          <article class="pv-app-card">
+            <div class="pv-detail-app-image">
+              <img
+                src="assets/images/logo/port-cranes.png"
+                alt="Port Cranes"
+              >
+            </div>
+            <h3 class="pv-detail-app-title">Port Cranes</h3>
+            <p class="pv-detail-app-desc">
+              대형 구조물과 장비가 함께 운용되는 환경에서 주변 장애물과 작업 영역을 감지할 수 있도록 지원합니다.
+              구조물 주변의 거리와 공간 데이터를 활용해 장비 운용 시 필요한 감지 체계에 활용됩니다.
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CATALOG DOWNLOAD -->
+      <section class="pv-catalog-section">
+        <div class="pv-catalog-image">
+          <img
+            src="assets/images/logo/catalog-cover.png"
+            alt="Privion DL Series Catalog"
+          >
+        </div>
+
+        <div class="pv-catalog-content">
+          <h2 class="pv-catalog-title">
+            산업 환경을 위한 정밀 센싱 솔루션
+          </h2>
+
+          <p class="pv-catalog-desc">
+            프리비온의 기술과 제품 구성을 한눈에 확인할 수 있는 소개 자료입니다.
+            산업 자동화와 로봇 시스템에 필요한 감지 안정성, 정밀한 센싱 성능, 주요 적용 분야를 함께 살펴볼 수 있으며,
+            실제 산업 환경을 고려한 기술적 특징과 제품 활용 방향까지 폭넓게 확인할 수 있습니다.
+          </p>
+
+          <a
+            href="assets/download/privion-dl-series-catalog.pdf"
+            class="pv-btn pv-btn-black"
+            download
+          >
+            Download
+          </a>
+        </div>
+      </section>
+
+      <!-- OTHER PRODUCTS -->
+      <section class="pv-other-section">
+        <h2 class="pv-section-title">Other products</h2>
+
+        <div class="pv-other-grid">
+
+          <a href="product-dl100.html" class="pv-other-card">
+            <div class="pv-other-image">
+              <img
+                src="assets/images/logo/dl100.png"
+                alt="LiDAR DL100"
+              >
+            </div>
+
+            <div class="pv-other-icons" aria-label="DL100 function icons">
+              <div class="pv-other-icon-item">
+                <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+                <span>감지</span>
+              </div>
+            </div>
+
+            <p class="pv-other-type">Detection Type</p>
+            <h3 class="pv-other-name">LiDAR DL100</h3>
+            <p class="pv-other-desc">컴팩트 산업용 감지형 LiDAR</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+          <a href="product-dl150.html" class="pv-other-card">
+            <div class="pv-other-image">
+              <img
+                src="assets/images/logo/dl150.png"
+                alt="LiDAR DL150"
+              >
+            </div>
+
+            <div class="pv-other-icons" aria-label="DL150 function icons">
+              <div class="pv-other-icon-item">
+                <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+                <span>감지</span>
+              </div>
+            </div>
+
+            <p class="pv-other-type">Detection Type</p>
+            <h3 class="pv-other-name">LiDAR DL150</h3>
+            <p class="pv-other-desc">야외환경 산업용 감지형 LiDAR</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+          <a href="product-dl150s.html" class="pv-other-card">
+            <div class="pv-other-image">
+              <img
+                src="assets/images/logo/dl150s.png"
+                alt="LiDAR DL150S"
+              >
+            </div>
+
+            <div class="pv-other-icons" aria-label="DL150S function icons">
+              <div class="pv-other-icon-item">
+                <img src="assets/images/icon1.jpg" alt="감지 아이콘">
+                <span>감지</span>
+              </div>
+
+              <div class="pv-other-icon-item">
+                <img src="assets/images/icon2.jpg" alt="스캔 아이콘">
+                <span>스캔</span>
+              </div>
+            </div>
+
+            <p class="pv-other-type">Detection / Scanning Type</p>
+            <h3 class="pv-other-name">
+              LiDAR DL150<span class="pv-model-accent">S</span>
+            </h3>
+            <p class="pv-other-desc">야외환경 산업용 감지/스캔형 LiDAR</p>
+            <span class="pv-btn pv-btn-white">View more</span>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pv-footer">
+    <div class="pv-footer-inner">
+      <div class="pv-footer-left">
+        <a href="index.html" class="pv-logo" aria-label="Privion Home">
+          <img
+            src="assets/images/logo/privion-logo.png"
+            alt="privion"
+            class="pv-logo-image"
+          >
+        </a>
+
+        <p class="pv-footer-info">
+          동원산업(주)<br>
+          Web www.privionlidar.com<br>
+          Tel 02-589-2312<br>
+          Email privion-lidar@dongwon.com<br>
+          주소 경기도 성남시 분당구 삼평동 621 판교이노밸리 제B동 6층 604호
+        </p>
+      </div>
+
+      <div class="pv-footer-right">
+        <p class="pv-copy">
+          Copyright © Privion. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/privion-common.js"></script>
+</body>
+</html>
