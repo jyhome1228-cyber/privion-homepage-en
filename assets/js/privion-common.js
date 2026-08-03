@@ -9,7 +9,6 @@
 (function () {
   "use strict";
 
-  var ADDRESS_KO = "경기도 성남시 분당구 삼평동 621 판교이노밸리 제B동 6층 604호";
   var ADDRESS_EN = "Suite 604, 6F, Building B, Pangyo Innovalley, 621 Sampyeong-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea";
 
   function getPath() {
@@ -311,7 +310,6 @@
 
     all(".pv-compare-card").forEach(function (card, cardIndex) {
       var data = cardIndex === 0 ? fmcw : tof;
-      all.call;
       Array.prototype.slice.call(card.querySelectorAll(".pv-compare-item")).forEach(function (item, index) {
         if (!data[index]) return;
         var strong = item.querySelector("strong");
@@ -370,25 +368,25 @@
     "product-dl100.html": {
       sub: "Compact Industrial Detection-Type LiDAR",
       desc: "DL100 provides reliable obstacle detection for indoor automation environments where AGVs and AMRs operate.<br>It maintains consistent performance against potential indoor false-detection factors such as dust and sunlight entering through windows.<br>With a detection range of up to 10 meters, it is well suited to mobile-robot safety-zone monitoring.",
-      sectionTitle: "Korean FMCW LiDAR for Diverse Industrial Applications",
+      sectionTitle: "FMCW LiDAR Solutions for Diverse Industrial Applications",
       sectionDesc: "PRIVION LiDAR products are designed around the structures and requirements of real industrial applications. DL100 delivers stable obstacle detection for indoor automation and robotic systems with a compact footprint and a detection range of up to 10 meters."
     },
     "product-dl100s.html": {
       sub: "Compact Industrial Detection and Scanning LiDAR",
       desc: "DL100S combines the obstacle-detection capabilities of DL100 with direct raw point-cloud data output.<br>It is suited to data-driven applications such as SLAM mapping and spatial perception as well as obstacle detection.<br>It supports both reliable sensing and spatial-data utilization in indoor AGV and AMR environments.",
-      sectionTitle: "Korean FMCW LiDAR for Diverse Industrial Applications",
+      sectionTitle: "FMCW LiDAR Solutions for Diverse Industrial Applications",
       sectionDesc: "PRIVION LiDAR products are designed around the structures and requirements of real industrial applications. DL100S supports both obstacle detection and point-cloud output for SLAM, spatial perception, and mapping systems."
     },
     "product-dl150.html": {
       sub: "Outdoor Industrial Detection-Type LiDAR",
       desc: "DL150 provides reliable detection in outdoor environments through its IP67 dust- and water-resistant design.<br>It maintains a detection range of up to 20 meters under demanding conditions including snow, rain, and strong sunlight.<br>It is suited to outdoor mobile robots, cranes, and fixed industrial equipment.",
-      sectionTitle: "Korean FMCW LiDAR for Diverse Outdoor Applications",
+      sectionTitle: "FMCW LiDAR Solutions for Diverse Outdoor Applications",
       sectionDesc: "DL150 combines IP67 protection with a detection range of up to 20 meters, making it suitable for outdoor mobile robots, cranes, fixed equipment, and other systems that require reliable obstacle detection in external environments."
     },
     "product-dl150s.html": {
       sub: "Outdoor Industrial Detection and Scanning LiDAR",
       desc: "DL150S combines the detection capabilities of DL150 with direct raw point-cloud data output.<br>Outdoor mobile robots, mobile cranes, and other equipment can use distance, velocity, and spatial data together with obstacle detection.<br>It is suited to advanced systems that require mapping and localization.",
-      sectionTitle: "Korean FMCW LiDAR for Diverse Outdoor Applications",
+      sectionTitle: "FMCW LiDAR Solutions for Diverse Outdoor Applications",
       sectionDesc: "DL150S combines IP67 protection, a detection range of up to 20 meters, and point-cloud data output for outdoor systems that require both obstacle detection and spatial-data processing."
     }
   };
