@@ -1,32 +1,26 @@
-# Privion Homepage
+# PRIVION English Website
 
-Privion 홈페이지 구축을 위한 정적 HTML/CSS/JS 퍼블리싱 파일입니다.
+English-language version of the PRIVION industrial FMCW LiDAR website.
 
-본 저장소는 Figma 디자인 기준으로 제작된 페이지 구조, 공통 CSS/JS, 이미지 에셋, PDF 다운로드 파일, 검색 기능, 약관 페이지, 개인정보처리방침 페이지를 관리하기 위한 저장소입니다.
+## Pages
 
----
+- Home
+- Technology
+- Products
+- DL100
+- DL100S
+- DL150
+- DL150S
+- Applications
+- Contact
+- Search
+- Terms of Use
+- Privacy Policy
 
-## 1. 페이지 구성
-
-- HOME
-- 기술 소개
-- 제품 목록
-- 제품 상세 DL100
-- 제품 상세 DL100S
-- 제품 상세 DL150
-- 제품 상세 DL150S
-- 적용 분야
-- 문의
-- 검색
-- 이용약관
-- 개인정보처리방침
-
----
-
-## 2. 주요 파일 구조
+## Structure
 
 ```text
-privion-homepage/
+privion-homepage-en/
 ├── index.html
 ├── technology.html
 ├── product.html
@@ -39,28 +33,24 @@ privion-homepage/
 ├── search.html
 ├── terms.html
 ├── privacy.html
-│
 ├── assets/
 │   ├── css/
-│   │   └── privion.css
+│   │   ├── privion.css
+│   │   └── privion-en.css
 │   ├── js/
 │   │   ├── privion-common.js
 │   │   └── privion-search.js
 │   ├── data/
 │   │   └── search-data.json
 │   ├── images/
-│   │   ├── logo/
-│   │   ├── home/
-│   │   ├── technology/
-│   │   ├── product/
-│   │   ├── application/
-│   │   ├── contact/
-│   │   └── og/
 │   └── download/
-│       └── privion-dl-series-catalog.pdf
-│
-├── header.html
-├── footer.html
-├── head-meta.html
-├── robots.txt
 └── sitemap.xml
+```
+
+Shared English localization, page metadata, navigation labels, product specifications, application copy, contact information, and policy content are managed through `assets/js/privion-common.js`.
+
+Search content is managed in `assets/data/search-data.json`.
+
+## Deployment Note
+
+Before production deployment, update the canonical domain, Open Graph URLs, `sitemap.xml`, and custom-domain settings to match the final English website domain.

@@ -1,17 +1,7 @@
-# =========================================================
-# PRIVION robots.txt
-#
-# 검색엔진 크롤러 접근 허용 설정 파일입니다.
-#
-# 최종 운영 도메인:
-# https://www.privionlidar.com
-#
-# Sitemap 주소도 최종 도메인 기준으로 작성했습니다.
-# 도메인 또는 URL 구조가 변경되면 아래 Sitemap 주소를 함께 수정해주세요.
-# =========================================================
+# PRIVION English website robots.txt
+# Replace the domain below with the final English production domain before deployment.
 
 User-agent: *
 Allow: /
 
-# Sitemap URL
 Sitemap: https://www.privionlidar.com/sitemap.xml

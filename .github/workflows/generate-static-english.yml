@@ -1,0 +1,54 @@
+name: Generate Static English Pages
+
+on:
+  push:
+    branches:
+      - english-conversion
+    paths:
+      - "scripts/**"
+      - "*.html"
+      - "assets/js/**"
+      - "assets/data/**"
+      - "assets/css/**"
+      - ".github/workflows/generate-static-english.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: english-conversion
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install localization dependency
+        run: npm install --no-save --no-package-lock cheerio@1.0.0
+
+      - name: Generate static English pages
+        run: |
+          node scripts/localize-static.js
+          node scripts/fix-contact-map.js
+
+      - name: Commit generated pages
+        run: |
+          if git diff --quiet; then
+            echo "No generated changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html technology.html product.html product-dl100.html product-dl100s.html product-dl150.html product-dl150s.html application.html contact.html search.html terms.html privacy.html
+          git commit -m "Generate static English pages [skip ci]"
+          git push origin english-conversion
