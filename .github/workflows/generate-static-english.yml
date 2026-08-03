@@ -5,7 +5,7 @@ on:
     branches:
       - english-conversion
     paths:
-      - "scripts/localize-static.js"
+      - "scripts/**"
       - "*.html"
       - "assets/js/**"
       - "assets/data/**"
@@ -37,7 +37,9 @@ jobs:
         run: npm install --no-save --no-package-lock cheerio@1.0.0
 
       - name: Generate static English pages
-        run: node scripts/localize-static.js
+        run: |
+          node scripts/localize-static.js
+          node scripts/fix-contact-map.js
 
       - name: Commit generated pages
         run: |
