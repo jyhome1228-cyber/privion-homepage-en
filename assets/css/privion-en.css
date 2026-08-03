@@ -12,6 +12,22 @@ html[lang="en"] .pv-nav a,
 html[lang="en"] .pv-section-title,
 html[lang="en"] .pv-page-title,
 html[lang="en"] .pv-page-desc,
+html[lang="en"] .pv-tech-title,
+html[lang="en"] .pv-tech-subtitle,
+html[lang="en"] .pv-tech-desc,
+html[lang="en"] .pv-tech-row-title,
+html[lang="en"] .pv-tech-row-text,
+html[lang="en"] .pv-compare-title,
+html[lang="en"] .pv-compare-item,
+html[lang="en"] .pv-product-name,
+html[lang="en"] .pv-product-sub,
+html[lang="en"] .pv-product-desc,
+html[lang="en"] .pv-application-title,
+html[lang="en"] .pv-application-desc,
+html[lang="en"] .pv-application-item-title,
+html[lang="en"] .pv-application-item-desc,
+html[lang="en"] .pv-policy-title,
+html[lang="en"] .pv-policy-content,
 html[lang="en"] .pv-footer-info,
 html[lang="en"] .pv-copy {
   letter-spacing: -0.015em;
@@ -26,4 +42,14 @@ html[lang="en"] button {
 
 html[lang="en"] .pv-footer-info {
   line-height: 1.72;
+}
+
+html[lang="en"] .pv-product-sub,
+html[lang="en"] .pv-application-title,
+html[lang="en"] .pv-tech-subtitle {
+  line-height: 1.2;
+}
+
+html[lang="en"] .pv-spec-table th {
+  white-space: normal;
 }
