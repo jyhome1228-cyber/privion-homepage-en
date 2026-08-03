@@ -1,0 +1,29 @@
+/* =========================================================
+   PRIVION ENGLISH SITE OVERRIDES
+========================================================= */
+
+html[lang="en"] body {
+  letter-spacing: 0;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+html[lang="en"] .pv-nav a,
+html[lang="en"] .pv-section-title,
+html[lang="en"] .pv-page-title,
+html[lang="en"] .pv-page-desc,
+html[lang="en"] .pv-footer-info,
+html[lang="en"] .pv-copy {
+  letter-spacing: -0.015em;
+}
+
+html[lang="en"] input,
+html[lang="en"] textarea,
+html[lang="en"] select,
+html[lang="en"] button {
+  letter-spacing: 0;
+}
+
+html[lang="en"] .pv-footer-info {
+  line-height: 1.72;
+}
