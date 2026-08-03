@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="ko">
-<head>
+<html lang="en"><head>
   <!-- =========================================================
     PRIVION SEARCH PAGE
     정적 JSON 데이터 기반 사이트 내부 검색 페이지입니다.
@@ -15,45 +14,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>검색 | Privion</title>
+  <title>Search | PRIVION</title>
 
-  <meta
-    name="description"
-    content="프리비온 홈페이지 내부 검색 페이지입니다."
-  >
+  <meta name="description" content="Search PRIVION products, technology, applications, downloads, and company information.">
 
-  <meta
-    name="keywords"
-    content="Privion, 프리비온, 검색, FMCW LiDAR, 산업용 LiDAR, 라이다"
-  >
+  <meta name="keywords" content="PRIVION, FMCW LiDAR, industrial LiDAR, LiDAR sensor, automation, robotics, AGV, AMR">
 
-  <meta name="author" content="Privion">
+  <meta name="author" content="PRIVION">
   <meta name="contact" content="privion-lidar@dongwon.com">
-  <meta name="telephone" content="02-589-2312">
+  <meta name="telephone" content="+82-2-589-2312">
 
   <!-- Naver Site Verification -->
   <meta name="naver-site-verification" content="7a2d3bdc939d1acfb9933c8ee472e83bf4a1f71d">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="검색 | Privion">
-  <meta property="og:description" content="프리비온 홈페이지 내부 검색 페이지">
+  <meta property="og:title" content="Search | PRIVION">
+  <meta property="og:description" content="Search PRIVION products, technology, applications, downloads, and company information.">
   <meta property="og:url" content="https://www.privionlidar.com/search.html">
   <meta property="og:image" content="https://www.privionlidar.com/assets/images/logo/catalog-cover.png">
-  <meta property="og:site_name" content="Privion">
+  <meta property="og:site_name" content="PRIVION">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="검색 | Privion">
-  <meta name="twitter:description" content="프리비온 홈페이지 내부 검색 페이지">
+  <meta name="twitter:title" content="Search | PRIVION">
+  <meta name="twitter:description" content="Search PRIVION products, technology, applications, downloads, and company information.">
   <meta name="twitter:image" content="https://www.privionlidar.com/assets/images/logo/catalog-cover.png">
 
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-  >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
   <link rel="stylesheet" href="assets/css/privion.css">
 
   <style>
@@ -130,6 +120,8 @@
       }
     }
   </style>
+
+<link rel="stylesheet" href="assets/css/privion-en.css">
 </head>
 
 <body>
@@ -137,35 +129,22 @@
   <!-- HEADER -->
   <header class="pv-header">
     <div class="pv-header-inner">
-      <a href="index.html" class="pv-logo" aria-label="Privion Home">
-        <img
-          src="assets/images/logo/privion-logo.png"
-          alt="privion"
-          class="pv-logo-image"
-        >
+      <a href="index.html" class="pv-logo" aria-label="PRIVION Home">
+        <img src="assets/images/logo/privion-logo.png" alt="PRIVION" class="pv-logo-image">
       </a>
 
       <nav class="pv-nav" aria-label="Main Navigation">
-        <a href="technology.html">기술 소개</a>
-        <a href="product.html">제품</a>
-        <a href="application.html">적용 분야</a>
-        <a href="contact.html">문의</a>
+        <a href="technology.html">Technology</a>
+        <a href="product.html">Products</a>
+        <a href="application.html">Applications</a>
+        <a href="contact.html">Contact</a>
       </nav>
 
       <div class="pv-header-right">
         <a href="search.html" class="pv-header-icon is-active" aria-label="Search">
           <svg viewBox="0 0 24 24" fill="none">
-            <circle
-              cx="11"
-              cy="11"
-              r="7"
-              stroke-width="1.8"
-            ></circle>
-            <path
-              d="M16.5 16.5L21 21"
-              stroke-width="1.8"
-              stroke-linecap="round"
-            ></path>
+            <circle cx="11" cy="11" r="7" stroke-width="1.8"></circle>
+            <path d="M16.5 16.5L21 21" stroke-width="1.8" stroke-linecap="round"></path>
           </svg>
         </a>
       </div>
@@ -179,19 +158,11 @@
         <h1 class="pv-search-title">Search</h1>
 
         <div class="pv-search-box">
-          <input
-            type="search"
-            id="pv-search-input"
-            placeholder="검색어를 입력하세요."
-            autocomplete="off"
-            aria-label="사이트 검색"
-          >
+          <input type="search" id="pv-search-input" placeholder="Enter a keyword" autocomplete="off" aria-label="Site search">
         </div>
 
         <div id="pv-search-results" class="pv-search-results">
-          <p class="pv-search-empty">
-            검색어를 입력하면 관련 페이지가 표시됩니다.
-          </p>
+          <p class="pv-search-empty">Enter a keyword to view relevant pages.</p>
         </div>
       </div>
     </section>
@@ -201,32 +172,21 @@
   <footer class="pv-footer">
     <div class="pv-footer-inner">
       <div class="pv-footer-left">
-        <a href="index.html" class="pv-logo" aria-label="Privion Home">
-          <img
-            src="assets/images/logo/privion-logo.png"
-            alt="privion"
-            class="pv-logo-image"
-          >
+        <a href="index.html" class="pv-logo" aria-label="PRIVION Home">
+          <img src="assets/images/logo/privion-logo.png" alt="PRIVION" class="pv-logo-image">
         </a>
 
-        <p class="pv-footer-info">
-          동원산업(주)<br>
-          Web www.privionlidar.com<br>
-          Tel 02-589-2312<br>
-          Email privion-lidar@dongwon.com<br>
-          주소 경기도 성남시 분당구 삼평동 621 판교이노밸리 제B동 6층 604호
-        </p>
+        <p class="pv-footer-info">Dongwon Industries Co., Ltd.<br>Web www.privionlidar.com<br>Tel +82-2-589-2312<br>Email privion-lidar@dongwon.com<br>Address Suite 604, 6F, Building B, Pangyo Innovalley, 621 Sampyeong-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea</p>
       </div>
 
       <div class="pv-footer-right">
-        <p class="pv-copy">
-          Copyright © Privion. All rights reserved.
-        </p>
+        <p class="pv-copy">Copyright © PRIVION. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="assets/js/privion-common.js"></script>
   <script src="assets/js/privion-search.js"></script>
-</body>
-</html>
+
+
+</body></html>
